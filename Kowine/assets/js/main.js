@@ -223,4 +223,23 @@ window.onscroll = function () {
       // console.log(document.documentElement.scrollTop);
     }
 
-  
+    $("#close-btn").click(function(){
+      $(".sidebar-all").toggle();
+    });
+    $("#close-s").click(function(){
+      $(".sidebar-all").toggle();
+    });
+
+    $("#pass").click(function (e) {
+      e.preventDefault()
+      let active=$(".hidden-list")
+      active.removeClass("hidden-list")
+      this.parentElement.parentElement.classList.add("hidden-list")
+      
+    });
+    $(".second-head").click(function (e) {
+      e.preventDefault()
+      let active=$(".hidden-list")
+      active.removeClass("hidden-list")
+      this.parentElement.classList.add("hidden-list")
+    });

@@ -349,6 +349,97 @@ footer .footer-third i {
   font-family: Open Sans, sans-serif;
 }
 
+#Sidebar .sidebar-all {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0 1px 12px 2px hsla(0deg, 0%, 56%, 0.3);
+  width: 280px;
+  background-color: #fff;
+}
+#Sidebar .sidebar-all .head-sidebar {
+  background-color: #BFA483;
+  padding: 10px 20px 15px;
+  cursor: pointer;
+}
+#Sidebar .sidebar-all .head-sidebar h4 {
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 300;
+}
+#Sidebar .sidebar-all .head-sidebar h4 span {
+  margin-left: 3px;
+}
+#Sidebar .sidebar-all .head-sidebar h4 span i {
+  color: #fff;
+  font-size: 25px;
+}
+#Sidebar .sidebar-all .menu-sidebar {
+  height: 100vh;
+  position: relative;
+}
+#Sidebar .sidebar-all .menu-sidebar ul {
+  padding: 33px 20px;
+}
+#Sidebar .sidebar-all .menu-sidebar ul li {
+  list-style: none;
+  padding: 8px 0 6px;
+  border-bottom: 1px solid #F6F6F6;
+}
+#Sidebar .sidebar-all .menu-sidebar ul li a {
+  font-size: 14px;
+  line-height: 30px;
+  color: #000;
+}
+#Sidebar .sidebar-all .menu-sidebar ul li i {
+  font-size: 12px;
+  padding-right: 0.75rem;
+}
+#Sidebar .sidebar-all .hidden-list {
+  opacity: 0;
+  visibility: hidden;
+}
+#Sidebar #sub-sidebar {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s ease;
+}
+#Sidebar #sub-sidebar .second-head {
+  background-color: #fff;
+  position: relative;
+  text-align: center;
+}
+#Sidebar #sub-sidebar .second-head i {
+  font-size: 12px;
+  color: #868686;
+}
+#Sidebar #sub-sidebar .second-head #sub-title {
+  color: #BFA483;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: Open Sans, sans-serif;
+}
+#Sidebar #sub-sidebar .second-head #back-btn {
+  position: absolute;
+  left: 18px;
+}
+#Sidebar #sub-sidebar #second-list {
+  padding: 9px 20px;
+}
+#Sidebar #sub-sidebar #second-list li {
+  padding: 5px 0;
+  border: none;
+}
+#Sidebar #sub-sidebar #second-list li a {
+  color: #868686;
+}
+
 #First .first-all .carousel-control {
   filter: none;
   opacity: 1;
@@ -1152,6 +1243,37 @@ footer .footer-third i {
   width: 100%;
   height: 55px;
   background-color: #868686;
+  color: #fff;
+}
+
+#ShopFirst .shopfirst-all {
+  background: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/bg-breadcrumb.jpg.webp) center/cover;
+  padding: 50px 0;
+}
+#ShopFirst .shopfirst-all h2 {
+  font-size: 60px;
+  color: #fff;
+}
+#ShopFirst .shopfirst-all .navShop {
+  margin-top: 10px;
+}
+#ShopFirst .shopfirst-all .navShop i {
+  color: #fff;
+  font-size: 10px;
+  margin: 0 7px;
+}
+#ShopFirst .shopfirst-all .navShop a {
+  font-size: 13px;
+  font-family: Open Sans, sans-serif;
+}
+#ShopFirst .shopfirst-all .navShop a:first-child {
+  color: hsla(0deg, 0%, 100%, 0.8);
+  transition: 0.3s ease;
+}
+#ShopFirst .shopfirst-all .navShop a:first-child:hover {
+  color: #fff;
+}
+#ShopFirst .shopfirst-all .navShop a:last-child {
   color: #fff;
 }
 

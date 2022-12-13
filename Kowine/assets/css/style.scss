@@ -21,6 +21,99 @@
     background: transparent;
     font-family:Open Sans,sans-serif;
 }
+#Sidebar{
+    .sidebar-all{
+        display: none;
+        position: fixed;
+        left:0;
+        top: 0;
+        z-index: 9999;
+        box-shadow: 0 1px 12px 2px hsl(0deg 0% 56% / 30%);
+        width: 280px;
+        background-color: #fff;
+        .head-sidebar{
+            background-color: $btn-color1;
+            padding: 10px 20px 15px;
+            cursor: pointer;
+            h4{
+                display: inline-block;
+                color: #fff;
+                font-size: 13px;
+                font-family: Open Sans,sans-serif;
+                font-weight: 300;
+                span{
+                    margin-left: 3px;
+                    i{
+                        color: #fff;
+                        font-size: 25px;                    
+                    }
+                }
+            }
+        }
+        .menu-sidebar{
+            height: 100vh;
+            position: relative;
+            ul{
+                padding: 33px 20px;
+                li{
+                    list-style: none;
+                    padding: 8px 0 6px;
+                    border-bottom: 1px solid $secondary-color;
+                    a{
+                        font-size: 14px;
+                        line-height: 30px;
+                        color: #000;
+                    }
+                    i{
+                        font-size: 12px;
+                        padding-right: .75rem;
+                    }
+                }
+            }
+        }
+        .hidden-list{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    #sub-sidebar{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: .3s ease;
+        .second-head{
+            background-color: #fff;
+            position: relative;
+            text-align: center;
+            i{
+                font-size: 12px;
+                color: $mega-text;
+            }
+            #sub-title{
+                color: $btn-color1;
+                font-weight: 500;
+                font-size: 16px;
+                font-family: Open Sans,sans-serif;
+            }
+            #back-btn{
+                position: absolute;
+                left: 18px;
+            }
+        }
+        #second-list{
+               padding: 9px 20px;
+                li{
+                    padding: 5px 0;
+                    border: none;
+                    a{
+                        color: $mega-text;
+                    }
+                }
+            }
+            
+        }   
+    }
 
     #First{
         .first-all{
@@ -876,6 +969,38 @@
                     height: 55px;
                     background-color: $mega-text;
                     color:#fff;
+                }
+            }
+        }
+    }
+}
+#ShopFirst{
+    .shopfirst-all{
+        background: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/bg-breadcrumb.jpg.webp) center / cover ;
+        padding: 50px 0;
+        h2{
+            font-size:60px ;
+            color: #fff;
+        }
+        .navShop{
+            margin-top: 10px;
+            i{
+                color: #fff;
+                font-size: 10px;
+                margin: 0 7px;
+            }
+            a{
+                font-size: 13px;
+                font-family: Open Sans,sans-serif;
+                &:first-child{
+                    color: hsla(0,0%,100%,.8);
+                    transition: .3s ease;
+                    &:hover{
+                      color: #fff;
+                    }
+                }
+                &:last-child{
+                    color: #fff;
                 }
             }
         }
