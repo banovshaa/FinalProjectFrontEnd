@@ -21,6 +21,10 @@
     background: transparent;
     font-family:Open Sans,sans-serif;
 }
+@mixin common_stars($color,$fontSize){
+    color: $color;
+    font-size: $fontSize;
+}
 #Sidebar{
     .sidebar-all{
         display: none;
@@ -44,8 +48,7 @@
                 span{
                     margin-left: 3px;
                     i{
-                        color: #fff;
-                        font-size: 25px;                    
+                        @include common_stars(#fff, 25px);                   
                     }
                 }
             }
@@ -87,8 +90,7 @@
             position: relative;
             text-align: center;
             i{
-                font-size: 12px;
-                color: $mega-text;
+                @include common_stars($mega-text,12px );
             }
             #sub-title{
                 color: $btn-color1;
@@ -116,6 +118,28 @@
     }
 
     #First{
+        @keyframes scaleIMG {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.1);
+            } 
+            100%{
+                transform: scale(1);
+            }
+        }
+        @keyframes moveIMG {
+            0%{
+                transform: translateX(0);
+            }
+            50%{
+                transform: translateX(-10%);
+            } 
+            100%{
+                transform: translateX(0);;
+            }
+        }
         .first-all{
             .carousel-control {
                 filter: none;
@@ -125,31 +149,86 @@
                 width: 90px;
             }
             .carousel-item{
-                img{
-                    height: 594px;
+                position: relative;
+                overflow: hidden;
+                .carousel-icon1{
+                    position: absolute;
+                    left: 10%;
+                    bottom: -8%;
+                    width:97px;
+                    height: 419px;
+                    transform: translateX(0);
+                    animation: moveIMG 3s ease infinite;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .carousel-icon2{
+                    position: absolute;
+                    right: 15%;
+                    bottom: -22%;
+                    width: 171px;
+                    height: 660px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .carousel-icon3{
+                    position: absolute;
+                    right: 8%;
+                    bottom: 8%;
+                    width: 68px;
+                    height: 206px;
+                    transform: scale(1);
+                    animation: scaleIMG 3s ease infinite;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .carousel-icon4{
+                    position: absolute;
+                    left: 0%;
+                    bottom: -16%;
+                    width: 409px;
+                    height: 639px;
+                    transform: translateX(0);
+                    animation: moveIMG 5s ease infinite;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .carousel-icon5{
+                    position: absolute;
+                    right: 8%;
+                    bottom: -6%;
+                    width: 129px;
+                    height: 432px;
+                    transform: translateX(0);
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
                 .carousel-caption{
+                    width: 100%;
                     h5{
                         color: #fff;
-                        line-height: 70px;
-                        font-size: 60px;
-                        width: 70%;
-                        margin: 0 auto;
                     }
                     p{
                         color: #fff;
-                        line-height: 24px;
-                        font-size: 20px;
-                        margin: 1.5rem 0;
+                        margin: 1rem 0 1.5rem;
                     }
                     a{
                     color: #fff;
-                    line-height: 40px;
                     letter-spacing: 2px;
                     font-size: 14px;
                     border-radius: 0;
                     border:2px solid #fff;
-                    padding: 0px 24px;
                     transition: .3s ease;
                     &:hover{
                         background-color: $btn-color1;
@@ -161,8 +240,7 @@
             .icon-b{
                 transition: .5s ease;
                 i{
-                    font-size: 20px;
-                    color: #fff;
+                    @include common_stars(#fff,20px );
                     border: 1px solid #fff;
                     padding:6px 10px 8px;
                     border-radius: 100%;
@@ -528,8 +606,7 @@
             .e-text{
                 text-align: center;
                 i{
-                    font-size: 52px;
-                    color: #fff;
+                    @include common_stars(#fff,52px );
                 }
                 h3{
                     color: #fff;
@@ -617,8 +694,7 @@
         .d-arrow{
             animation:moving 3s ease-in infinite;
             i{
-                color: #fff;
-                font-size: 25px;
+                @include common_stars(#fff,25px );
             }
         }
     }
@@ -768,8 +844,7 @@
                 .c-rev{
                     margin-bottom: 7px;
                     i{
-                        color: #FFC007;
-                        font-size: 13px;
+                        @include common_stars(#FFC007,13px );
                         margin-right: 5px;
                     }
                 }
@@ -813,8 +888,7 @@
             .icon{
                 i{
                     display: inline-block;
-                    font-size: 52px;
-                    color: #fff;
+                    @include common_stars(#fff,52px);
                     transform: translateY(-15%);
                 }
             }
@@ -978,6 +1052,7 @@
     .shopfirst-all{
         background: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/bg-breadcrumb.jpg.webp) center / cover ;
         padding: 50px 0;
+        margin-bottom: 60px;
         h2{
             font-size:60px ;
             color: #fff;
@@ -985,8 +1060,7 @@
         .navShop{
             margin-top: 10px;
             i{
-                color: #fff;
-                font-size: 10px;
+                @include common_stars(#fff,10px);
                 margin: 0 7px;
             }
             a{
@@ -1006,6 +1080,170 @@
         }
     }
 }
+#ShopSecond{
+    .shopsecond-all{
+        .cat-item{
+            margin-bottom: 50px;
+            h2{
+                font-size: 18px;
+                line-height: 20px;
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+             }
+             .ct-boxes{
+                div{
+                    cursor: pointer;
+                    span{
+                        font-family:Open Sans,sans-serif;
+                        color: $mega-text;
+                        font-size: 14px;
+                        transition: .3s ease;
+                        &:last-child{
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 100%;
+                            background-color: #f1f1f1;
+                            text-align: center;
+                            line-height: 25px;
+                            font-size: 12px;
+                        }
+                    }
+                    &:hover{
+                        span{
+                            color: #000;
+                        }
+                    }
+                }
+                
+             }
+            .min-max-slider {
+                position: relative;
+                margin-bottom: 20px;
+               label {
+                display: none;
+            }
+            .legend{
+                div{
+                    display: none;
+                }
+            }
+            span.value {
+                font-family:Open Sans,sans-serif;
+                height: 1.7em; 
+                display: inline-block;
+                font-size: 15px;
+                bottom: -47px;
+                position: absolute;
+            }
+            span.value.lower{
+                left: 60px;
+
+                &::before{
+                    content: "€ "; 
+                    display: inline-block;
+                }
+            }
+            span.value.upper{
+                left: 90px;
+                &::before{
+                    content: " - €"; 
+                    display: inline-block;
+                    margin-left: 0.4em;
+                }
+            }
+            >input {
+                cursor: pointer;
+                position: absolute;
+                -webkit-appearance: none;
+                outline: none !important;
+                background: transparent;
+                background-image: linear-gradient(to bottom, transparent 0%, transparent 30%, #000 30%, #000 60%, transparent 60%, transparent 100%);
+                height: 4px;
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 12px;
+                    height: 12px;
+                    background: #fff;
+                    cursor: pointer;
+                    border: 2px solid #000;
+                }
+                &::-webkit-slider-runnable-track {
+                    cursor: pointer;
+                }
+            }
+        }
+        #ranVal{
+            color: $mega-text;
+            font-size: 15px;
+        }
+        .checkList{
+            label{
+                margin:5px 7px 5px 0;
+                padding: 11px 15px;
+                border: 1px solid #ddd;
+                border-radius: 0;
+                cursor: pointer;
+                color: $mega-text;
+                font-size: 14px;
+                transition: .3s ease;
+                &:hover{
+                    border-color: #000;
+                    color: #000;
+                }
+            }
+        }
+        .imgList{
+            label{
+                width: 90px;
+                height: 90px;
+                padding: 0px!important;
+                img{
+                    width: 100%;
+                    height: 90px;
+                    vertical-align: bottom;
+                    padding: 5px;
+                }
+            }
+        } .feat-box{
+            border-bottom: 1px solid $bg-before;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            .feat-img{
+                border: 1px solid #dadada;
+                width: 78px;
+                height: 78px;
+            }
+            .feat-text{
+                margin-left: 1rem;
+                .d-stars{
+                    i{
+                        @include common_stars($span-color,10px);
+                    }
+                }
+                .stars{
+                    i{
+                        @include common_stars(#E1E1E1,10px);
+                    }
+                }
+                
+                a{
+                    color: $mega-text;
+                    font-size: 14px;
+                }
+                p{
+                    color: $btn-color1;
+                    font-size: 14px;
+                   span{
+                    text-decoration: line-through;
+                    color: $mega-text;
+                   }
+                }
+            }
+        }
+    } 
+}
+}
 @media (max-width:1200px) {
     #Fourth{
         .f-text{
@@ -1023,12 +1261,9 @@
     }
 }
 @media (max-width:992px) {
-    
         .slick-next, .slick-prev{
             &::before{
                 opacity: 1!important;
-            }
-            
-        
+            }        
 }
 }

@@ -292,7 +292,7 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-                  <div class="h-third-menu text-start">
+                  <div id="close-btn" class="h-third-menu text-start">
                     <i class="bi bi-list"></i>
                   </div>
                 </div>
@@ -315,6 +315,71 @@
           </div>
     </header>
     <main>
+      <section id="Sidebar">
+        <div class="sidebar-all">
+            <div class="head-sidebar text-end">
+              <h4 id='close-s'>CLOSE  <span><i class="bi bi-x"></i></span></h4>
+            </div>
+            <div class="menu-sidebar">
+              <ul id="main-list">
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="">HOME</a>
+                  <i id="pass"class="bi bi-chevron-right"></i>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="">SHOP</a>
+                  <i class="bi bi-chevron-right"></i>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="">PRODUCT</a>
+                  <i class="bi bi-chevron-right"></i>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="">BLOG</a>
+                  <i class="bi bi-chevron-right"></i>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="">PAGE</a>
+                  <i class="bi bi-chevron-right"></i>
+                </li>
+              </ul>
+              <div id="sub-sidebar" class="hidden-list">
+                <div class="head-sidebar second-head">
+                  <a href="" id="back-btn">
+                    <i class="bi bi-chevron-left"></i>
+                  </a>
+                  <a href="" id="sub-title">HOME</a>
+                </div>
+                  <ul id="second-list">
+                    <li>
+                      <a href="">Home Categories</a>
+                    </li>
+                    <li>
+                      <a href="">Home Classic</a>
+                    </li>
+                    <li>
+                      <a href="">Home Clean</a>
+                    </li>
+                    <li>
+                      <a href="">Home Elegant</a>
+                    </li>
+                    <li>
+                      <a href="">Home Modern</a>
+                    </li>
+                    <li>
+                      <a href="">Home Stronger</a>
+                    </li>
+                    <li>
+                      <a href="">Home Stylish</a>
+                    </li>
+                    <li>
+                      <a href="">Home Unique</a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+      </section>
         <section id="ShopFirst">
             <div class="shopfirst-all text-center">
                 <h2>Shop</h2>
@@ -334,51 +399,211 @@
                                 <div class="cat-item">
                                     <h2>CATEGORIES</h2>
                                     <div class="ct-boxes">
-                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
                                             <span>Champagnes</span>
                                             <span>6</span>
                                         </div>
-                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
                                             <span>Half Bottles</span>
                                             <span>12</span>
                                         </div>
-                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
                                             <span>Red Wines</span>
                                             <span>13</span>
                                         </div>
-                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
                                             <span>Rosé Wines</span>
                                             <span>9</span>
                                         </div>
-                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
                                             <span>Sparkling</span>
                                             <span>6</span>
                                         </div>
-                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
                                             <span>White Wines</span>
                                             <span>9</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="cat-item">
-                                    <h2>PRICE</h2>
-                                    <input type="range">
-                                    <p><span>Range : </span> $35 - $350</p>
+                                    <h2 class="p-0">PRICE</h2>
+                                    <div class="min-max-slider" data-legendnum="2">
+                                      <label for="min">Minimum price</label>
+                                      <input id="min" class="min" name="min" type="range" step="1" min="30" max="350"/>
+                                      <label for="max">Maximum price</label>
+                                      <input id="max" class="max" name="max" type="range" step="1" min="30" max="350" />
+                                    </div>    
+                                    <span id="ranVal">Range : </span>                           
                                 </div>
                                 <div class="cat-item">
                                     <h2>BOTTLE SIZE</h2>
-                                    <div>
-                                        <input type="checkbox" id="150-cl">
-                                        <label for="150-cl">150-cl"</label>
-                                   </div>
-                                    
-                                    <input type="checkbox">
-                                    <input type="checkbox">
-                                    <input type="checkbox">
-                                    <input type="checkbox">
-                                    <input type="checkbox">
-                                    <input type="checkbox">
-                                    <input type="checkbox">
+                                    <div class="checkList">
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 150 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 18.7 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 25 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 3 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 300 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 37.5 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 50 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 75 cl</label>
+                                      </span>
+                                    </div>
+                                </div>
+                                <div class="cat-item">
+                                  <h2>VINTAGE</h2>
+                                  <div class="checkList">
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2011</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2012</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2013</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2014</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2015</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2016</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2017</label>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="cat-item">
+                                  <h2>BRANDS</h2>
+                                  <div class="checkList imgList">
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand1.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand2.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand3.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand4.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand5.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand1.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="cat-item">
+                                  <h2>FEATURE PRODUCT</h2>
+                                  <div class="feat-items">
+                                    <div class="feat-box d-flex">
+                                      <div class="feat-img">
+                                        <a href="">
+                                          <img class="img-fluid"src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product10.jpg.webp" alt="">
+                                        </a>
+                                      </div>
+                                      <div class="feat-text">
+                                        <div class="d-stars">
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <a class="feat-name" href="">Donec a enim a ipsum lobortis blandit interdum</a>
+                                        <p><span>$130.00 </span>$125.00</p>
+                                      </div>
+                                    </div>
+                                    <div class="feat-box d-flex">
+                                      <div class="feat-img">
+                                        <a href="">
+                                          <img class="img-fluid"src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product12.jpg.webp" alt="">
+                                        </a>
+                                      </div>
+                                      <div class="feat-text">
+                                        <div class="stars">
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <a class="feat-name" href="">Donec a enim a ipsum lobortis blandit interdum</a>
+                                        <p>$35.00</p>
+                                      </div>
+                                    </div>
+                                    <div class="feat-box d-flex border-0">
+                                      <div class="feat-img">
+                                        <a href="">
+                                          <img class="img-fluid"src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product14.jpg.webp" alt="">
+                                        </a>
+                                      </div>
+                                      <div class="feat-text">
+                                        <div class="stars">
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <a class="feat-name" href="">Donec a enim a ipsum lobortis blandit interdum</a>
+                                        <p><span>$100.00 </span>$90.00</p>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                             </div>
                         </div>
