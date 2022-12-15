@@ -35,11 +35,9 @@ $('.slider-products').slick({
         slidesToScroll: 1
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 });
+
 $('.slider-products2').slick({
   dots: false,
   infinite: true,
@@ -73,11 +71,9 @@ $('.slider-products2').slick({
         slidesToScroll: 1
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 });
+
 $('.slider3').slick({
   dots: false,
   infinite: false,
@@ -117,9 +113,6 @@ $('.slider3').slick({
         slidesToScroll: 1
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 });
 
@@ -197,31 +190,25 @@ $('.slider-client').slick({
   ]
 });
 
+$('#head-search').click(function(){
+  $('.toggleSearch').fadeToggle(100)
+});
 
-let btn=document.querySelector('#scrollBtn')
-window.onscroll = function () {
-  scrollFunction();
-  };
-  function scrollFunction() {
-    if (
+$(window).scroll(function(){
+  if ($('html, body').scrollTop()>20) {
+    $('.scroll-el').fadeIn(400);
+    $('.scroll-el').css('bottom','70px')
     
-    document.documentElement.scrollTop > 200
-    ) {
-    btn.style.display = "block";
-    } else {
-    btn.style.display = "none";
-    }
-    }
-    // When the user clicks on the button, scroll to the top of the document
-    btn.addEventListener("click", backToTop);
-    
-    function backToTop() {
-    document.documentElement.scrollTop = 0;
-    }
-
-    window.onscroll = function () {
-      // console.log(document.documentElement.scrollTop);
-    }
+  } else {
+    $('.scroll-el').fadeOut(400);
+    $('.scroll-el').css('bottom','-100%')
+  }
+});
+$('.scroll-el').click(function(){
+  $('html, body').animate({
+    scrollTop:0
+  },300)
+});
 
     $("#close-btn").click(function(){
       $(".sidebar-all").toggle();

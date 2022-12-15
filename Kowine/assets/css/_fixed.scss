@@ -249,6 +249,95 @@ header{
         
     }
 }
+.toggleSearch{
+    z-index: 9999;
+    display: none;
+    position: absolute;
+    right:4%;
+    top: 21%;
+    padding:30px 20px;
+    width: 380px;
+    background: #fff;
+    border: 1px solid #f6f6f6;
+    .ts-box{
+        display: flex;
+        border: 1px solid #dadada;
+        button{
+            background: transparent;
+            color: #000;
+            width: 43px;
+            height: 43px;
+            border: none;
+        }
+        input{
+            background: transparent;
+            border: none;
+            outline: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            width: calc(100% - 43px);
+            line-height: 43px;
+        }
+    }
+}
+.toggleForm{
+    z-index: 99999;
+    width: 400px;
+    max-width: 400px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-top: 2px solid $btn-color1;
+    padding: 30px;
+    .f-top{
+        margin-bottom: 10px;
+        span{
+            &:first-child{
+                font-size: 19px;
+            }
+            &:last-child{
+                font-size: 16px;
+                color: $btn-color1;
+            }
+            
+        }
+    }
+    .f-content{
+       .fc-box{
+        margin-bottom: 15px;
+        *{
+            font-family: 'Open Sans', sans-serif;
+        }
+        label{
+            margin: 0 0 5px;
+            font-size: 14px;
+            color: $mega-text;
+            span{
+                color: $span-color;
+            }
+        }
+        input{
+            padding: 0 20px;
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            outline: none;
+            font-size: 14px;
+            border: 1px solid #ddd;
+        }
+       } 
+       .remember-all{
+        .rememberme{
+            input{
+                width: 100%;
+                height: 25px;
+                line-height: 25px;
+                -webkit-border-radius: 0;
+                font-size: 14px;
+            }
+        }
+       }
+    }
+}
 footer{
     .footer-all{
         background-color: $secondary-color;
@@ -314,17 +403,15 @@ footer{
         }
     }
     .scroll-el{
-        display: none;
         z-index: 9999;
         position: fixed;
         right: 30px;
-        bottom: 70px;
+        bottom: -100%;
         width: 40px;
         height: 40px;
         background-color: $btn-color1;
         text-align: center;
         cursor: pointer;
-       
 
         i{
             line-height: 35px;

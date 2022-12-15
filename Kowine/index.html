@@ -310,7 +310,7 @@
                       <div class="log-reg d-inline-block">
                         <a href="">LOGIN / REGISTER</a>
                       </div>
-                        <i class="bi bi-search"></i>
+                        <i id='head-search'class="bi bi-search"></i>
                         <i class="bi bi-heart"></i>
                         <i class="me-12px bi bi-bag">
                           <span class="span-bag">0</span>
@@ -319,6 +319,42 @@
                   </div>
                 </div>
             </nav>
+        </div>
+        <div class="toggleForm">
+            <form>
+              <div class="f-top d-flex justify-content-between align-items-center">
+                <span>Sing In</span>
+                <span>Create An Account</span>
+              </div>
+              <div class="f-content">
+                <div class="fc-box">
+                    <label>Username or email <span>*</span></label>
+                    <input type="text" required class="input-text" id="username" placeholder="Your name">
+                </div>
+                <div class="fc-box">
+									<label>Password <span>*</span></label>
+									<input required type="password" id="password" placeholder="Password">
+								</div>
+                <div class="remember-all d-flex justify-content-between align-items-center">
+									<div class="rememberme">
+										<input type="checkbox" id="r-me">
+										<label for="r-me">Remember me</label>
+									</div>
+									<div class="lostpassword">
+										<a href="https://wpbingosite.com/wordpress/kowine/my-account/lost-password/">Lost your password?</a>
+									</div>
+								</div>
+                <div class="button-login">
+								  <button>LOGIN</button>
+								</div>
+              </div>
+            </form>
+        </div>
+        <div class="toggleSearch"> 
+          <div class="ts-box">
+            <button id="srchBtn"><i class="bi bi-search"></i></button>
+            <input type="text" placeholder="Search...">
+          </div>
         </div>
         <div class="header-third px-5px py-20px">
           <div class="container-fluid">
@@ -417,37 +453,37 @@
          <div class="container-b">
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img  src="assets/images/mainslider1.jpeg" class="d-block w-100 h-lg-594px" alt="">
+              <div class="carousel-item active h-272px h-sm-350px h-md-362px h-lg-594px">
+                <img  src="assets/images/mainslider1.jpeg" class="d-block" alt="">
                 <div class="carousel-caption">
-                  <h5 class="fs-xxl-60px fs-xl-56px fs-lg-50px fs-md-40px fs-28px">SPRING <br>DELIGHT RED</h5>
-                  <p class="fs-xxl-20px fs-xl-16px fs-md-14px fs-10px">Explore the diversity of one of our favourite wine regions.</p>
-                  <a href="" class="btn px-lg-24px py-lg-10px px-12px py-5px">SHOP KNOW</a>
+                  <h5 class="fs-xxl-60px fs-xl-56px fs-lg-50px fs-md-43px fs-sm-39px fs-28px">SPRING <br>DELIGHT RED</h5>
+                  <p class="fs-xxl-20px fs-xl-16px fs-md-14px fs-sm-12px fs-10px">Explore the diversity of one of our favourite wine regions.</p>
+                  <a href="" class="btn px-lg-24px py-lg-10px p-md-8px px-12px py-5px">SHOP KNOW</a>
                 </div>
-                <span class="carousel-icon1 w-lg-97px h-lg-419px w-md-79px h-md-342px">
+                <span class="carousel-icon1 w-xl-97px h-xl-419px w-lg-70px h-lg-307px w-md-59px h-md-249px w-sm-41px h-sm-178px w-32px h-139px">
                   <img src="assets/images/mainicon1.png" alt="">
                 </span>
-                <span class="carousel-icon2 w-lg-171px h-lg-660px w-md-119px h-md-429px">
+                <span class="carousel-icon2 w-xl-171px h-xl-660px w-lg-125px h-lg-482px w-md-101px h-md-389px w-sm-73px h-sm-284px w-57px h-220px">
                   <img src="assets/images/mainicon2.png" alt="">
                 </span>
-                <span class="carousel-icon3">
+                <span class="carousel-icon3 w-xl-68px h-xl-206px w-lg-49px h-lg-150px w-md-40px h-md-111px w-sm-28px h-sm-88px w-22px h-68px">
                   <img src="assets/images/mainicon3.png" alt="">
                 </span>
               </div>
-              <div class="carousel-item">
-                <img src="assets/images/mainslider2.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-item h-272px h-sm-350px h-md-362px h-lg-594px">
+                <img src="assets/images/mainslider2.jpeg" class="d-block" alt="...">
                 <div class="carousel-caption ">
-                  <h5> CHAMPAGNE & FIZZ </h5>
-                  <p>Explore the diversity of one of our favourite wine regions.</p>
-                  <a href="" class="btn">SHOP KNOW</a>
+                  <h5 class="fs-xxl-60px fs-xl-56px fs-lg-50px fs-md-43px fs-sm-39px fs-28px"> CHAMPAGNE & FIZZ </h5>
+                  <p class="fs-xxl-20px fs-xl-16px fs-md-14px fs-sm-12px  fs-10px">Explore the diversity of one of our favourite wine regions.</p>
+                  <a href="" class="btn px-lg-24px py-lg-10px px-12px py-5px">SHOP KNOW</a>
                 </div>
-                <span class="carousel-icon4">
+                <span class="carousel-icon4 w-xl-409px h-xl-639px w-md-251px h-md-390px w-sm-168px h-sm-263px w-121px h-188px">
                   <img src="assets/images/mainicon4.png" alt="">
                 </span>
-                <span class="carousel-icon3" style="right:18%; ">
+                <span class="carousel-icon3  w-md-42px h-md-126px w-sm-30px h-sm-95px w-22px h-68px" style="right:18%; ">
                   <img src="assets/images/mainicon3.png" alt="">
                 </span>
-                <span class="carousel-icon5">
+                <span class="carousel-icon5 w-xl-129px h-xl-432px w-lg h-lg w-md-78px w-sm-61px h-sm-207px h-md-266px w-42px h-144px">
                   <img src="assets/images/mainicon5.png" alt="">
                 </span>
               </div>
