@@ -264,18 +264,19 @@ header .header-third .bag .bi-bag {
 .toggleForm .f-top {
   margin-bottom: 10px;
 }
-.toggleForm .f-top span:first-child {
+.toggleForm .f-top span {
   font-size: 19px;
+  color: #000;
 }
-.toggleForm .f-top span:last-child {
+.toggleForm .f-top a {
   font-size: 16px;
   color: #BFA483;
 }
+.toggleForm .f-content * {
+  font-family: "Open Sans", sans-serif;
+}
 .toggleForm .f-content .fc-box {
   margin-bottom: 15px;
-}
-.toggleForm .f-content .fc-box * {
-  font-family: "Open Sans", sans-serif;
 }
 .toggleForm .f-content .fc-box label {
   margin: 0 0 5px;
@@ -294,12 +295,75 @@ header .header-third .bag .bi-bag {
   font-size: 14px;
   border: 1px solid #ddd;
 }
-.toggleForm .f-content .remember-all .rememberme input {
-  width: 100%;
-  height: 25px;
-  line-height: 25px;
-  -webkit-border-radius: 0;
+.toggleForm .f-content .remember-all .round {
+  position: relative;
+}
+.toggleForm .f-content .remember-all .round label {
+  background-color: #fff;
+  border: 2px solid #868686;
+  border-radius: 100%;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.toggleForm .f-content .remember-all .round label::after {
+  content: "Remember me";
+  position: absolute;
+  top: -6px;
+  left: 20px;
   font-size: 14px;
+  width: 100px;
+}
+.toggleForm .f-content .remember-all .round input[type=checkbox] {
+  visibility: hidden;
+}
+.toggleForm .f-content .remember-all .round input[type=checkbox]:checked + label {
+  background-color: #BFA483;
+  border-color: #868686;
+}
+.toggleForm .f-content .remember-all .round input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+.toggleForm .f-content .remember-all .lostpassword {
+  padding-bottom: 15px;
+}
+.toggleForm .f-content .remember-all .lostpassword a {
+  font-size: 13px;
+  color: #000;
+  position: relative;
+}
+.toggleForm .f-content .remember-all .lostpassword a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -4px;
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+  transition: 0.3s ease;
+  bottom: 0;
+}
+.toggleForm .f-content .remember-all .lostpassword a:hover::before {
+  width: 50%;
+  background-color: #BFA483;
+}
+.toggleForm .f-content .button-login button {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Marcellus, serif;
+  border: 0;
+  width: 100%;
+  height: 45px;
+  transition: 0.3s ease;
+}
+.toggleForm .f-content .button-login button:hover {
+  background-color: #BFA483;
 }
 
 footer .footer-all {

@@ -291,22 +291,20 @@ header{
     .f-top{
         margin-bottom: 10px;
         span{
-            &:first-child{
-                font-size: 19px;
-            }
-            &:last-child{
-                font-size: 16px;
-                color: $btn-color1;
-            }
-            
+            font-size: 19px;
+            color: #000;
+        } 
+        a{
+            font-size: 16px;
+            color: $btn-color1;
         }
     }
     .f-content{
-       .fc-box{
-        margin-bottom: 15px;
         *{
             font-family: 'Open Sans', sans-serif;
         }
+       .fc-box{
+        margin-bottom: 15px;
         label{
             margin: 0 0 5px;
             font-size: 14px;
@@ -326,16 +324,82 @@ header{
         }
        } 
        .remember-all{
-        .rememberme{
-            input{
+        .round {
+            position: relative;
+            label {
+                background-color: #fff;
+                border: 2px solid #868686;
+                border-radius: 100%;
+                cursor: pointer;
+                width: 14px;
+                height: 14px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                &::after{
+                    content: 'Remember me';
+                    position: absolute;
+                    top: -6px;
+                    left: 20px;
+                    font-size: 14px;
+                    width: 100px;
+                }
+              }
+              input[type="checkbox"] {
+                visibility: hidden;
+                &:checked + label {
+                    background-color: #BFA483;
+                    border-color: #868686;
+              }
+              &:checked + label:after {
+                opacity: 1;
+              }
+          }
+       }
+       .lostpassword{
+        padding-bottom: 15px;
+        a{
+            font-size: 13px;
+            color: #000;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -4px;
+                height: 1px;
                 width: 100%;
-                height: 25px;
-                line-height: 25px;
-                -webkit-border-radius: 0;
-                font-size: 14px;
+                background-color: #000;
+                transition: .3s ease;
+                bottom: 0;
+  
+            }
+            &:hover{
+                &::before{
+                    width: 50%;
+                    background-color: $btn-color1;
+                }
             }
         }
        }
+       }
+       .button-login{
+        button{
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+            font-size: 12px;
+            font-family: Marcellus,serif;
+            border: 0;
+            width: 100%;
+            height: 45px;
+            transition: .3s ease;
+            &:hover{
+                background-color: $btn-color1;
+            }
+        }
+    }
     }
 }
 footer{
