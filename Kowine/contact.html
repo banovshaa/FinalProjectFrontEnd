@@ -276,7 +276,7 @@
                   <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
                     <div class="h-second-right text-end">
                       <div class="log-reg d-inline-block">
-                        <a class="" href="">LOGIN / REGISTER</a>
+                        <a id="loginRegister" href="">LOGIN / REGISTER</a>
                       </div>
                         <i id="head-search" class=" bi bi-search"></i>
                         <i class=" bi bi-heart"></i>
@@ -288,6 +288,34 @@
                 </div>
             </nav>
         </div>
+        <div class="toggleForm" style="top:8%; right:12%;">
+            <div class="f-top d-flex justify-content-between align-items-center">
+              <span>Sing In</span>
+              <a href="">Create An Account</a>
+            </div>
+            <div class="f-content">
+              <div class="fc-box">
+                  <label>Username or email <span>*</span></label>
+                  <input type="text"  class="input-text" id="username" placeholder="Your name">
+              </div>
+              <div class="fc-box">
+                <label>Password <span>*</span></label>
+                <input  type="password" id="password" placeholder="Password">
+              </div>
+              <div class="remember-all d-flex justify-content-between align-items-center">
+                <div class="round">
+                  <input  type="checkbox" checked id="checkbox" />
+                  <label for="checkbox"></label>
+                </div>
+                <div class="lostpassword">
+                  <a href="">Lost your password?</a>
+                </div>
+              </div>
+              <div class="button-login">
+                <button>LOGIN</button>
+              </div>
+            </div>
+      </div>
         <div class="toggleSearch" style="top:9%; right:2%"> 
           <div class="ts-box">
             <button id="srchBtn"><i class="bi bi-search"></i></button>

@@ -193,6 +193,10 @@ $('.slider-client').slick({
 $('#head-search').click(function(){
   $('.toggleSearch').fadeToggle(100)
 });
+$('#loginRegister').click(function(e){
+  e.preventDefault();
+  $('.toggleForm').fadeToggle(100)
+});
 
 $(window).scroll(function(){
   if ($('html, body').scrollTop()>20) {
@@ -349,3 +353,21 @@ sliders.forEach( function(slider) {
 let val=$('.feat-name').text()
 let newVal= val.length>30?val=val.slice(0,30)+'...':val;
 $('.feat-name').text(newVal)
+
+
+if(JSON.parse(localStorage.getItem('Users'))===null) {
+  localStorage.setItem('Users',JSON.stringify([]))
+} else {
+  let btn=document.querySelector('.button-login')
+  btn.onclick=function(e){
+    e.preventDefault();
+    let username=document.getElementById('username').value
+    let password=document.getElementById('password').value
+    let users=JSON.parse(localStorage.getItem('Users'))
+    users.push({
+      Username:username,
+      Password:password
+    })
+    localStorage.setItem('Users',JSON.stringify(users))
+  }
+}

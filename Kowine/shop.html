@@ -276,7 +276,7 @@
                   <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
                     <div class="h-second-right text-end">
                       <div class="log-reg d-inline-block">
-                        <a class="" href="">LOGIN / REGISTER</a>
+                        <a id="loginRegister" href="">LOGIN / REGISTER</a>
                       </div>
                         <i id="head-search" class=" bi bi-search"></i>
                         <i class=" bi bi-heart"></i>
@@ -288,6 +288,34 @@
                 </div>
             </nav>
         </div>
+        <div class="toggleForm" style="top:8%; right:12%;">
+            <div class="f-top d-flex justify-content-between align-items-center">
+              <span>Sing In</span>
+              <a href="">Create An Account</a>
+            </div>
+            <div class="f-content">
+              <div class="fc-box">
+                  <label>Username or email <span>*</span></label>
+                  <input type="text"  class="input-text" id="username" placeholder="Your name">
+              </div>
+              <div class="fc-box">
+                <label>Password <span>*</span></label>
+                <input  type="password" id="password" placeholder="Password">
+              </div>
+              <div class="remember-all d-flex justify-content-between align-items-center">
+                <div class="round">
+                  <input  type="checkbox" checked id="checkbox" />
+                  <label for="checkbox"></label>
+                </div>
+                <div class="lostpassword">
+                  <a href="">Lost your password?</a>
+                </div>
+              </div>
+              <div class="button-login">
+                <button>LOGIN</button>
+              </div>
+            </div>
+      </div>
         <div class="toggleSearch" style="top:9%; right:2%"> 
           <div class="ts-box">
             <button id="srchBtn"><i class="bi bi-search"></i></button>
@@ -612,7 +640,562 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-9"></div>
+                        <div class="col-lg-9">
+                          <div class="left-head-part d-flex justify-content-between align-items-center">
+                            <p>Showing 1–12 of 29 item(s) </p>
+                            <div class="sorting d-flex justify-content-between align-items-center">
+                              <div class="sort-left">
+                                <i class="bi bi-grid-3x2-gap-fill"></i>
+                                <i class="bi bi-grid-3x3-gap-fill"></i>
+                                <i class="activeIcon bi bi-grid-3x2-gap-fill"></i>
+                                <i class="activeIcon bi bi-grid-3x2-gap-fill"></i>
+                                <i class="bi bi-list-ul"></i>
+                              </div>
+                              <div class="sort-right">
+                                <div class="dropdown">
+                                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Default Sorting
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Default Sorting</a></li>
+                                    <li><a class="dropdown-item" href="#">Sort By Popularity</a></li>
+                                    <li><a class="dropdown-item" href="#">Sort By Average Rating</a></li>
+                                    <li><a class="dropdown-item" href="#">Sort By Latest</a></li>
+                                    <li><a class="dropdown-item" href="#">Sort By Price: Low To High</a></li>
+                                    <li><a class="dropdown-item" href="#">Sort By Price: High To Low</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="products-content">
+                            <div class="row g-4">
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span>-10%</span>
+                                     <span id="none"></span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product11-450x450.jpg" class="card-img-top" alt="">        
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product17-450x450.jpg" alt="...">
+                                   </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(1 review)</span>
+                                    </div>
+                                    <a href="">Aliquam id lorem vel nisl blandit dapibus</a>
+                                    <p><span id="before-prc">$100.00</span>$90.00</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span>-6%</span>
+                                     <span id="none"></span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product26-450x450.jpg" class="card-img-top" alt="">        
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product13-450x450.jpg" alt="...">
+                                   </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(1 review)</span>
+                                    </div>
+                                    <a href="">Aliquam quis enim diam commodo leo sed</a>
+                                    <p>$30.00 - $40.00</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span>-13%</span>
+                                     <span id="none"></span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product23-450x450.jpg" class="card-img-top" alt="">        
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product9-450x450.jpg" alt="...">
+                                   </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(0 review)</span>
+                                    </div>
+                                    <a href="">Cras faucibus tortor arcu, id blandit enim</a>
+                                    <p><span id="before-prc">$400.00</span>$350.00</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span>-4%</span>
+                                     <span>Hot</span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product10-450x450.jpg.webp" class="card-img-top" alt="">        
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product26-450x450.jpg.webp" alt="...">
+                                   </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(1 review)</span>
+                                    </div>
+                                    <a href="">Donec a enim a ipsum lobortis blandit interdum</a>
+                                    <p><span id="before-prc">$135.00</span>$125.00</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span id="none"></span>
+                                     <span id="none"></span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product2-450x450.jpg" class="card-img-top" alt="">        
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product16-450x450.jpg" alt="...">
+                                   </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(0 review)</span>
+                                    </div>
+                                    <a href="">Donec faucibus odio felis nec viverra nisi sollicitudin</a>
+                                    <p>$60.00</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span id="none"></span>
+                                     <span id="none"></span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product13-450x450.jpg" class="card-img-top" alt="...">
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product5-450x450.jpg" class="card-img-top" alt="">         
+                                  </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(1 review)</span>
+                                    </div>
+                                    <a href="">Donec nunc felis, lobortis nec justo a rutrum</a>
+                                    <p>$120.00</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span>-22%</span>
+                                     <span>Hot</span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product12-450x450.jpg" class="card-img-top" alt="">        
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product28-450x450.jpg" alt="...">
+                                   </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(0 review)</span>
+                                    </div>
+                                    <a href="">Donec tellus eros, porta sit amet leo in convallis</a>
+                                    <p>$35.00</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span id="none"></span>
+                                     <span id="none"></span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product6-450x450.jpg" class="card-img-top" alt="">        
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product15-450x450.jpg" alt="...">
+                                   </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(0 review)</span>
+                                    </div>
+                                    <a href="">Etiam commodo leo sed porta varius, morbi vel</a>
+                                    <p>$120.00</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span id="none"></span>
+                                     <span id="none">Hot</span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product17-450x450.jpg"class="card-img-top" alt="">        
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product5-450x450.jpg" alt="...">
+                                   </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(1 review)</span>
+                                    </div>
+                                    <a href="">In hac habitasse platea dictumst tempor mollis</a>
+                                    <p>$214.22</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span id="none"></span>
+                                     <span id="none">Hot</span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2018/10/Wine-01-01-450x450.jpg"class="card-img-top" alt="">        
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2018/10/Wine-01-03-450x450.jpg" alt="...">
+                                   </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(1 review)</span>
+                                    </div>
+                                    <a href="">In hac habitasse platea dictumst tempor vet</a>
+                                    <p>$100.00</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span id="none"></span>
+                                     <span id="none"></span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product26-450x450.jpg" class="card-img-top" alt="">        
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product6-450x450.jpg" alt="...">
+                                   </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(0 review)</span>
+                                    </div>
+                                    <a href="">In ut nibh id purus consequat viverra congue sitl</a>
+                                    <p>$200.00</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
+                                <div class="box">
+                                  <div class="box-image">
+                                    <div class="spans">
+                                     <span>-22%</span>
+                                     <span id="none"></span>
+                                    </div>
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product27-450x450.jpg"class="card-img-top" alt="">        
+                                    <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/Product11-450x450.jpg" alt="...">
+                                   </div>
+                                   <div class="b-list">
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-bag"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-heart"></i>
+                                       </a>
+                                     </div>
+                                     <div class="l-item">
+                                       <a href="">
+                                         <i class="bi bi-search"></i>
+                                       </a>
+                                     </div>
+                                   </div>
+                                  <div class="box-text">
+                                    <div class="rev">
+                                      <span class="stars">
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                        <i style="color:#E1E1E1"class="bi bi-star-fill"></i>
+                                      </span>
+                                      <span class="review">(0 review)</span>
+                                    </div>
+                                    <a href="">Morbi vel arcu scelerisque, facilisis elit vitae</a>
+                                    <p><span id="before-prc">$35.00</span>$40.00</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="left-foot-part d-flex justify-content-center">
+                            <span class="d-none"><i class="bi bi-chevron-left"></i></span>
+                            <span class="activePage">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span><i class="bi bi-chevron-right"></i></span>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
