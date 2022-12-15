@@ -1416,6 +1416,7 @@
         }
         .sort-right{
             .dropdown{
+                z-index: 999999;
                 button{
                     border: 1px solid #000;
                     border-radius: 0;

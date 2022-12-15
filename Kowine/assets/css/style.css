@@ -1837,6 +1837,9 @@ footer .footer-third i {
 #ShopSecond .left-head-part .sorting .sort-left i:last-child {
   transform: translateY(-2px);
 }
+#ShopSecond .left-head-part .sorting .sort-right .dropdown {
+  z-index: 999999;
+}
 #ShopSecond .left-head-part .sorting .sort-right .dropdown button {
   border: 1px solid #000;
   border-radius: 0;
