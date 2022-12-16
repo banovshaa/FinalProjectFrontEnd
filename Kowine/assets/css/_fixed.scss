@@ -410,6 +410,7 @@ header{
 footer{
     .footer-all{
         background-color: $secondary-color;
+        
         .footer-first{
             padding: 35px 0;
             .contact{  
@@ -460,6 +461,7 @@ footer{
         }
         .footer-third{
             position: fixed;
+            z-index: 9999;
             bottom: 0;
             left: 0;
             width: 100%;
@@ -506,7 +508,6 @@ footer{
         .header-second{
             display: none;
         }
-        
     }
     @media(min-width:576px)and(max-width:768px)  {
         .footer-second{

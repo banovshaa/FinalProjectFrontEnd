@@ -16,9 +16,9 @@
 <body>
     <header>
         <div class="header-second">
-            <nav class="navbar navbar-expand-lg align-items-center py-lg-25px py-sm-30px">
+            <nav class="navbar navbar-expand-lg align-items-center p-25px py-lg-25px py-sm-30px">
                 <div class="container p-0">
-                    <a class="navbar-brand col-3" href="index.html">
+                    <a class="navbar-brand col-3" href="shop.html">
                         <img class="h-22px align-baseline" src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/logo.png.webp" alt="">
                     </a>
                   <div class="collapse navbar-collapse" id="navbarExampleOnHover">
@@ -280,9 +280,11 @@
                       </div>
                         <i id="head-search" class=" bi bi-search"></i>
                         <i class=" bi bi-heart"></i>
-                        <i class=" me-12px bi bi-bag">
-                          <span class="span-bag">0</span>
-                        </i>
+                        <a href="basket.html">
+                          <i class="bi bi-bag">
+                            <span class="span-bag"></span>
+                          </i>
+                        </a>
                     </div>
                   </div>
                 </div>
@@ -332,25 +334,78 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                   <div class="logo text-center">
-                    <a class="navbar-brand" href="https://wpbingosite.com/wordpress/kowine/">
+                    <a class="navbar-brand" href="shop.html">
                       <img class="h-22px align-text-center" src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/logo.png.webp" alt="">
                     </a>
                   </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                   <div class="bag text-end pe-10px">
-                    <i class="bi bi-bag">
-                      <span class="span-bag">0</span>
-                    </i>
+                    <a href="basket.html">
+                      <i class="bi bi-bag">
+                        <span class="span-bag"></span>
+                      </i>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
     </header>
-    
+    <main>
+      <section id="EmptyCart">
+        <div class="empty-cart text-center my-5rem d-none">
+          <h2>Your Cart is Empty!</h2>
+          <a href="shop.html" class="btn text-de">Go To Shopping</a>
+          <div class="w-50prcnt mx-auto"> 
+            <img class="img-fluid"src="assets/images/delivery-guy-with-parcel-on-bike.svg" alt="">
+          </div>
+        </div>
+      </section>
+      <section id="BasketFirst">
+        <div class="basketfirst-all">
+         <h2>Shopping Cart(<span id="cartTotal"></span>)</h2> 
+         <div class="container">
+          <div class="row my-3 g-5">
+            <div class="col-xl-8 col-lg-12 col-md-12 col-12">
+              <table id="mainTable" class="d-none">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+              <div id="clearAll" class="btn w-100 btn-dark my-3 d-none">
+                Clear All
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-12 col-md-12 col-12">
+              <div class="total">
+                <h3>Cart totals</h3>
+                <div class="p-20px">
+                  <div class="d-flex justify-content-between align-items-center my-4"> 
+                    <span>Total</span>
+                    <span id="totalPrice"></span>
+                  </div>
+                  <div>
+                    <a href="">PROCEED TO CHECKOUT</a>
+                  </div>
+                </div>
+               </div>
+            </div>
+          </div>   
+         </div>
+        </div>
+      </section>
+    </main>
     <footer>
-      <div class="footer-all">
+      <div class="footer-all mb-50px">
         <div class="footer-first">
           <div class="container-b">
             <div class="row">

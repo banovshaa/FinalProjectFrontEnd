@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-second">
-            <nav class="navbar navbar-expand-lg align-items-center py-lg-25px py-sm-30px">
+            <nav class="navbar navbar-expand-lg align-items-center p-25px py-lg-25px py-sm-30px">
                 <div class="container p-0">
                     <a class="navbar-brand col-3" href="index.html">
                         <img class="h-22px align-baseline" src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/logo.png.webp" alt="">
@@ -280,9 +280,11 @@
                       </div>
                         <i id="head-search" class=" bi bi-search"></i>
                         <i class=" bi bi-heart"></i>
-                        <i class=" me-12px bi bi-bag">
-                          <span class="span-bag">0</span>
-                        </i>
+                        <a href="basket.html">
+                          <i class=" me-12px bi bi-bag">
+                            <span class="span-bag"></span>
+                          </i>
+                        </a>
                     </div>
                   </div>
                 </div>
@@ -332,16 +334,18 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                   <div class="logo text-center">
-                    <a class="navbar-brand" href="https://wpbingosite.com/wordpress/kowine/">
+                    <a class="navbar-brand" href="index.html">
                       <img class="h-22px align-text-center" src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/logo.png.webp" alt="">
                     </a>
                   </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                   <div class="bag text-end pe-10px">
-                    <i class="bi bi-bag">
-                      <span class="span-bag">0</span>
-                    </i>
+                    <a href="basket.html">
+                      <i class="bi bi-bag">
+                        <span class="span-bag"></span>
+                      </i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -414,6 +418,227 @@
             </div>
         </div>
       </section>
+      <section id="SidebarFilter">
+        <div class="sidebarfilter-all">
+          <div class="s-filter-head text-end">
+            <div id="closeFilter">
+              <span>CLOSE</span>
+              <i class="bi bi-x"></i>
+            </div>
+          </div>
+           <div class="categories-all">
+                                <div class="cat-item">
+                                    <h2>CATEGORIES</h2>
+                                    <div class="ct-boxes">
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
+                                            <span>Champagnes</span>
+                                            <span>6</span>
+                                        </div>
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
+                                            <span>Half Bottles</span>
+                                            <span>12</span>
+                                        </div>
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
+                                            <span>Red Wines</span>
+                                            <span>13</span>
+                                        </div>
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
+                                            <span>Rosé Wines</span>
+                                            <span>9</span>
+                                        </div>
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
+                                            <span>Sparkling</span>
+                                            <span>6</span>
+                                        </div>
+                                        <div class="mt-10px d-flex justify-content-between align-items-center">
+                                            <span>White Wines</span>
+                                            <span>9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cat-item">
+                                    <h2 class="p-0">PRICE</h2>
+                                    <div class="min-max-slider" data-legendnum="2">
+                                      <label for="min">Minimum price</label>
+                                      <input id="min" class="min" name="min" type="range" step="1" min="30" max="350"/>
+                                      <label for="max">Maximum price</label>
+                                      <input id="max" class="max" name="max" type="range" step="1" min="30" max="350" />
+                                    </div>    
+                                    <span id="ranVal">Range : </span>                           
+                                </div>
+                                <div class="cat-item">
+                                    <h2>BOTTLE SIZE</h2>
+                                    <div class="checkList">
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 150 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 18.7 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 25 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 3 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 300 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 37.5 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 50 cl</label>
+                                      </span>
+                                      <span>
+                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                        <label class="btn" for="btn-check"> 75 cl</label>
+                                      </span>
+                                    </div>
+                                </div>
+                                <div class="cat-item">
+                                  <h2>VINTAGE</h2>
+                                  <div class="checkList">
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2011</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2012</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2013</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2014</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2015</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2016</label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">2017</label>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="cat-item">
+                                  <h2>BRANDS</h2>
+                                  <div class="checkList imgList">
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand1.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand2.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand3.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand4.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand5.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                    <span>
+                                      <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                      <label class="btn" for="btn-check">
+                                        <img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand1.jpg" alt="Brand 1">
+                                      </label>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="cat-item">
+                                  <h2>FEATURE PRODUCT</h2>
+                                  <div class="feat-items">
+                                    <div class="feat-box d-flex">
+                                      <div class="feat-img">
+                                        <a href="">
+                                          <img class="img-fluid"src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product10.jpg.webp" alt="">
+                                        </a>
+                                      </div>
+                                      <div class="feat-text">
+                                        <div class="d-stars">
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <a class="feat-name" href="">Donec a enim a ipsum lobortis blandit interdum</a>
+                                        <p><span>$130.00 </span>$125.00</p>
+                                      </div>
+                                    </div>
+                                    <div class="feat-box d-flex">
+                                      <div class="feat-img">
+                                        <a href="">
+                                          <img class="img-fluid"src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product12.jpg.webp" alt="">
+                                        </a>
+                                      </div>
+                                      <div class="feat-text">
+                                        <div class="stars">
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <a class="feat-name" href="">Donec a enim a ipsum lobortis blandit interdum</a>
+                                        <p>$35.00</p>
+                                      </div>
+                                    </div>
+                                    <div class="feat-box d-flex border-0">
+                                      <div class="feat-img">
+                                        <a href="">
+                                          <img class="img-fluid"src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product14.jpg.webp" alt="">
+                                        </a>
+                                      </div>
+                                      <div class="feat-text">
+                                        <div class="stars">
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                          <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <a class="feat-name" href="">Donec a enim a ipsum lobortis blandit interdum</a>
+                                        <p><span>$100.00 </span>$90.00</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+        </div>
+      </section>
         <section id="ShopFirst">
             <div class="shopfirst-all text-center">
                 <h2>Shop</h2>
@@ -428,7 +653,7 @@
             <div class="shopsecond-all">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-xl-3 col-lg-3 col-md-12 col-12">
                             <div class="categories-all">
                                 <div class="cat-item">
                                     <h2>CATEGORIES</h2>
@@ -641,16 +866,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-9">
+                        <div class="col-xl-9 col-lg-9 col-md-12 col-12">
                           <div class="left-head-part d-flex justify-content-between align-items-center">
                             <p>Showing 1–12 of 29 item(s) </p>
+                            <a class="hiddenFilter">
+                              <i class="bi bi-sliders"></i>   
+                            </a>
                             <div class="sorting d-flex justify-content-between align-items-center">
                               <div class="sort-left">
-                                <i class="bi bi-grid-3x2-gap-fill"></i>
-                                <i class="bi bi-grid-3x3-gap-fill"></i>
-                                <i class="activeIcon bi bi-grid-3x2-gap-fill"></i>
-                                <i class="activeIcon bi bi-grid-3x2-gap-fill"></i>
-                                <i class="bi bi-list-ul"></i>
+                                <i id='sort-1' class="s-icons bi bi-grid-3x2-gap-fill"></i>
+                                <i id='sort-2' class="s-icons bi bi-grid-3x3-gap-fill"></i>
+                                <span class="s-icons activeIcon" id='sort-3' >
+                                  <i class="bi bi-grid-3x2-gap-fill"></i>
+                                  <i class="bi bi-grid-3x2-gap-fill"></i>
+                                </span>
+                                <i id='sort-4' class="s-icons bi bi-list-ul"></i>
                               </div>
                               <div class="sort-right">
                                 <div class="dropdown">
@@ -671,8 +901,8 @@
                           </div>
                           <div id="1" class="products-content">
                             <div class="row g-4">
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="1" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span>-10%</span>
@@ -683,7 +913,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -710,12 +940,12 @@
                                       <span class="review">(1 review)</span>
                                     </div>
                                     <a href="">Aliquam id lorem vel nisl blandit dapibus</a>
-                                    <p><span id="before-prc">$100.00</span>$90.00</p>
+                                    <p><span id="before-prc">$100.00</span><span>$90.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="2" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span>-6%</span>
@@ -727,7 +957,7 @@
                                    <div class="b-list">
                                      <div class="l-item">
                                        <a href="">
-                                         <i class="bi bi-bag"></i>
+                                        <i class="bi bi-arrow-right"></i>
                                        </a>
                                      </div>
                                      <div class="l-item">
@@ -753,12 +983,12 @@
                                       <span class="review">(1 review)</span>
                                     </div>
                                     <a href="">Aliquam quis enim diam commodo leo sed</a>
-                                    <p>$30.00 - $40.00</p>
+                                    <p><span>$30.00 - $40.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="3" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span>-13%</span>
@@ -769,7 +999,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -796,12 +1026,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">Cras faucibus tortor arcu, id blandit enim</a>
-                                    <p><span id="before-prc">$400.00</span>$350.00</p>
+                                    <p><span id="before-prc">$400.00</span><span>$350.00</span> </p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="4"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span>-4%</span>
@@ -813,7 +1043,7 @@
                                    <div class="b-list">
                                      <div class="l-item">
                                        <a href="">
-                                         <i class="bi bi-bag"></i>
+                                        <i class="bi bi-arrow-right"></i>
                                        </a>
                                      </div>
                                      <div class="l-item">
@@ -839,12 +1069,12 @@
                                       <span class="review">(1 review)</span>
                                     </div>
                                     <a href="">Donec a enim a ipsum lobortis blandit interdum</a>
-                                    <p>$135.00 - $125.00</p>
+                                    <p><span>$135.00 - $125.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="5"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span id="none"></span>
@@ -855,7 +1085,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -882,12 +1112,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">Donec faucibus odio felis nec viverra nisi sollicitudin</a>
-                                    <p>$60.00</p>
+                                    <p><span>$60.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="6" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span id="none"></span>
@@ -898,7 +1128,7 @@
                                   </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -925,12 +1155,12 @@
                                       <span class="review">(1 review)</span>
                                     </div>
                                     <a href="">Donec nunc felis, lobortis nec justo a rutrum</a>
-                                    <p>$120.00</p>
+                                    <p><span>$120.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="7" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span>-22%</span>
@@ -941,7 +1171,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -968,12 +1198,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">Donec tellus eros, porta sit amet leo in convallis</a>
-                                    <p>$35.00</p>
+                                    <p><span>$35.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="8" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span id="none"></span>
@@ -984,7 +1214,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1011,12 +1241,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">Etiam commodo leo sed porta varius, morbi vel</a>
-                                    <p>$120.00</p>
+                                    <p><span>$120.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="9" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span id="none"></span>
@@ -1027,7 +1257,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1054,12 +1284,12 @@
                                       <span class="review">(1 review)</span>
                                     </div>
                                     <a href="">In hac habitasse platea dictumst tempor mollis</a>
-                                    <p>$214.22</p>
+                                    <p><span>$214.22</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="10" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span id="none"></span>
@@ -1070,7 +1300,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1097,12 +1327,12 @@
                                       <span class="review">(1 review)</span>
                                     </div>
                                     <a href="">In hac habitasse platea dictumst tempor vet</a>
-                                    <p>$100.00</p>
+                                    <p><span>$100.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="11"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span id="none"></span>
@@ -1113,7 +1343,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1140,12 +1370,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">In ut nibh id purus consequat viverra congue sitl</a>
-                                    <p>$200.00</p>
+                                    <p><span>$200.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="12" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span>-22%</span>
@@ -1156,7 +1386,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1183,7 +1413,7 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">Morbi vel arcu scelerisque, facilisis elit vitae</a>
-                                    <p><span id="before-prc">$35.00</span>$40.00</p>
+                                    <p><span id="before-prc">$35.00</span><span>$40.00</span></p>
                                   </div>
                                 </div>
                               </div>
@@ -1191,8 +1421,8 @@
                           </div> 
                           <div id="2" class="d-none products-content">
                             <div class="row g-4">
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="13"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                       <span id="none"></span>
@@ -1203,7 +1433,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1230,12 +1460,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">NAM JUSTO LIBERO PORTA EGET ALIQUET EGET, CONSEQUAT</a>
-                                    <p>$80.00</p>
+                                    <p><span>$80.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="14"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                       <span id="none"></span>
@@ -1246,7 +1476,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1273,12 +1503,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">NTEGER VEL ENIM EU TURPIS IACULIS FAUCIBUS VEL VITAE</a>
-                                    <p>$150.00</p>
+                                    <p><span>$150.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="15"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                       <span id="none"></span>
@@ -1289,7 +1519,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1316,12 +1546,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">NUNC AT TRISTIQUE NULLA AC SAGITTIS NULLA</a>
-                                    <p>$214.22</p>
+                                    <p><span>$214.22</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="16"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                       <span>-8%</span>
@@ -1333,7 +1563,7 @@
                                    <div class="b-list">
                                      <div class="l-item">
                                        <a href="">
-                                         <i class="bi bi-bag"></i>
+                                        <i class="bi bi-arrow-right"></i>
                                        </a>
                                      </div>
                                      <div class="l-item">
@@ -1359,12 +1589,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">NUNC NIBH ELIT, MOLLIS NEC ORNARE VEL ELIT</a>
-                                    <p>$30.00 - $50.00</p>
+                                    <p><span>$30.00 - $50.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="17"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                       <span id="none"></span>
@@ -1375,7 +1605,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1402,12 +1632,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">PELLENTESQUE SCELERISQUE EX ID MAURIS CONVALLIS ALIQUAM</a>
-                                    <p>$100.00</p>
+                                    <p><span>$100.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="18" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span>-33%</span>
@@ -1419,7 +1649,7 @@
                                    <div class="b-list">
                                      <div class="l-item">
                                        <a href="">
-                                         <i class="bi bi-bag"></i>
+                                        <i class="bi bi-arrow-right"></i>
                                        </a>
                                      </div>
                                      <div class="l-item">
@@ -1445,12 +1675,12 @@
                                       <span class="review">(1 review)</span>
                                     </div>
                                     <a href="">PHASELLUS RHONCUS VULPUTATE EROS, AC ULTRICES MAGNA</a>
-                                    <p>$100.00 - $180.00</p>
+                                    <p><span>$100.00 - $180.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="19" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span id="none"></span>
@@ -1461,7 +1691,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1488,12 +1718,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">PROIN MALESUADA LIGULA ET ARCU TINCIDUNT BIBENDUM</a>
-                                    <p>$250.00</p>
+                                    <p><span>$250.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="20" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span>-13%</span>
@@ -1504,7 +1734,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1531,12 +1761,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">QUISQUE EGET EROS SIT AMET NEQUE TINCIDUNT</a>
-                                    <p><span id="before-prc">$400.00</span>$350.00</p>
+                                    <p><span id="before-prc">$400.00</span><span>$350.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="21"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span>-10%</span>
@@ -1547,7 +1777,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1574,12 +1804,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">SED ALIQUAM VIVERRA CONSECTETUR AUCTOR LAOREET..</a>
-                                    <p><span id="before-prc">$100.00</span>$90.00</p>
+                                    <p><span id="before-prc">$100.00</span><span>$90.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="22"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                     <span id="none"></span>
@@ -1590,7 +1820,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1617,12 +1847,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">SED DOLOR TELLUS RHONCUS VIVERRA ALIQUAM EGESTAS</a>
-                                    <p>$350.00</p>
+                                    <p><span>$350.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="23" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                     <span id="none"></span>
@@ -1633,7 +1863,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1660,12 +1890,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">SED PORTTITOR DIAM MI TEMPUS SUSCIPIT DOLOR</a>
-                                    <p>$120.00</p>
+                                    <p><span>$120.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="24" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                     <span id="none"></span>
@@ -1676,7 +1906,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1703,7 +1933,7 @@
                                       <span class="review">(1 review)</span>
                                     </div>
                                     <a href="">SED VEL METUS EU MI COMMODO MOLLIS VITAE</a>
-                                    <p>$150.00</p>
+                                    <p><span>$150.00</span></p>
                                   </div>
                                 </div>
                               </div>
@@ -1711,8 +1941,8 @@
                           </div>
                           <div id="3" class="d-none products-content">
                             <div class="row g-4">
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="25"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                     <span id="none"></span>
@@ -1724,7 +1954,7 @@
                                    <div class="b-list">
                                      <div class="l-item">
                                        <a href="">
-                                         <i class="bi bi-bag"></i>
+                                        <i class="bi bi-arrow-right"></i>
                                        </a>
                                      </div>
                                      <div class="l-item">
@@ -1750,12 +1980,12 @@
                                       <span class="review">(1 review)</span>
                                     </div>
                                     <a href="">SENEAN A TURPIS FERMENTUM, ACCUMSAN URNA A</a>
-                                    <p>$35.00 - $200.00</p>
+                                    <p><span>$35.00 - $200.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="26" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span>-10%</span>
@@ -1766,7 +1996,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1793,12 +2023,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">SUSPENDISSE EU MAURIS DAPIBUS GRAVIDA ENIM VEL</a>
-                                    <p><span id="before-prc">$200.00</span>$180.00</p>
+                                    <p><span id="before-prc">$200.00</span><span>$180.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="27" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                       <span id="none"></span>
@@ -1809,7 +2039,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1836,12 +2066,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">SUSPENDISSE EU MAURIS DAPIBUS, GRAVIDA ENIM VEL</a>
-                                    <p>$135.00</p>
+                                    <p><span>$135.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="28"class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                      <span id="none"></span>
@@ -1852,7 +2082,7 @@
                                    </div>
                                    <div class="b-list">
                                      <div class="l-item">
-                                       <a href="">
+                                       <a id="addCart"href="">
                                          <i class="bi bi-bag"></i>
                                        </a>
                                      </div>
@@ -1879,12 +2109,12 @@
                                       <span class="review">(0 review)</span>
                                     </div>
                                     <a href="">UT EU LACUS FRINGILLA TEMPOR TELLUS NEC, CONSEQUAT QUAM</a>
-                                    <p>$200.00</p>
+                                    <p><span>$200.00</span></p>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-4 col-sm-3 col-6">
-                                <div class="box">
+                              <div class="col-xl-3 col-lg-4 col-md-4 col-6">
+                                <div data-name="29" class="box">
                                   <div class="box-image">
                                     <div class="spans">
                                     <span id="none"></span>
@@ -1896,7 +2126,7 @@
                                    <div class="b-list">
                                      <div class="l-item">
                                        <a href="">
-                                         <i class="bi bi-bag"></i>
+                                        <i class="bi bi-arrow-right"></i>
                                        </a>
                                      </div>
                                      <div class="l-item">
@@ -1922,7 +2152,7 @@
                                       <span class="review">(1 review)</span>
                                     </div>
                                     <a href="">UT RHONCUS VENENATIS JUSTO, EU VULPUTATE NUNC</a>
-                                    <p>$100.00 - $120.00</p>
+                                    <p><span>$100.00 - $120.00</span></p>
                                   </div>
                                 </div>
                               </div>
@@ -1939,10 +2169,14 @@
                     </div>
                 </div>
             </div>
+            <div class="succesfully">
+              <i class="fa-regular fa-circle-check"></i>
+              <span></span>
+            </div>
         </section>
     </main>
     <footer>
-      <div class="footer-all">
+      <div class="footer-all mb-50px">
         <div class="footer-first">
           <div class="container-b">
             <div class="row">
@@ -2055,6 +2289,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script  type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

@@ -197,7 +197,13 @@ $('#loginRegister').click(function(e){
   e.preventDefault();
   $('.toggleForm').fadeToggle(100)
 });
-
+$('.hiddenFilter').click(function(e){
+  e.preventDefault();
+  $('.sidebarfilter-all').css("transform", `translateX(0)`); 
+})
+$('#closeFilter').click(function(){
+  $('.sidebarfilter-all').css("transform", `translateX(-400px)`); 
+})
 $(window).scroll(function(){
   if ($('html, body').scrollTop()>20) {
     $('.scroll-el').fadeIn(400);
@@ -215,10 +221,10 @@ $('.scroll-el').click(function(){
 });
 
     $("#close-btn").click(function(){
-      $(".sidebar-all").toggle();
+      $(".sidebar-all").css("transform", `translateX(0)`); 
     });
     $("#close-s").click(function(){
-      $(".sidebar-all").toggle();
+      $(".sidebar-all").css("transform", `translateX(-500px)`); 
     });
 
     $("#pass").click(function (e) {
@@ -375,8 +381,33 @@ let prLists=document.querySelectorAll('.products-content')
 let navButtons =document.querySelectorAll('.left-foot-part span')
 let titleText=document.querySelector('.left-head-part p')
 let boxes=document.querySelectorAll('.products-content .box')
-console.log(prLists[0].querySelectorAll('.box').length);
 let title;
+let filterIcons=document.querySelectorAll('.s-icons')
+filterIcons.forEach(icon=>{
+  icon.addEventListener('click',function(){
+    let active=document.querySelector('.activeIcon')
+    active.classList.remove('activeIcon')
+    this.classList.add('activeIcon')
+  })
+})
+
+// document.querySelector('#sort-1').addEventListener('click',function(){
+//   boxes.forEach(box=>{
+//   box.parentElement.classList.value='col-xl-6 col-lg-4 col-md-4 col-6'
+//   })
+// })
+// document.querySelector('#sort-2').addEventListener('click',function(){
+//   boxes.forEach(box=>{
+//   box.parentElement.classList.value='col-xl-4 col-lg-4 col-md-4 col-6'
+//   })
+// })
+// document.querySelector('#sort-3').addEventListener('click',function(){
+//   boxes.forEach(box=>{
+//   box.parentElement.classList.value='col-xl-3 col-lg-4 col-md-4 col-6'
+//   })
+// })
+
+
 navButtons.forEach(navButton=>{
   navButton.addEventListener('click',function(){
     prLists.forEach(prList=>{
@@ -414,3 +445,50 @@ navButtons.forEach(navButton=>{
     this.classList.add('activePage');
   })
  })
+
+
+
+
+ if (localStorage.getItem('Wine')===null) {
+  localStorage.setItem('Wine',JSON.stringify([]))
+}
+ let addBtn=document.querySelectorAll('#addCart')
+ addBtn.forEach(btn=>{
+  btn.onclick=function(e){
+    e.preventDefault();
+    let id=this.parentElement.parentElement.parentElement.getAttribute('data-name')
+    let image=this.parentElement.parentElement.previousElementSibling.firstElementChild.nextElementSibling.src
+    let title=this.parentElement.parentElement.nextElementSibling.firstElementChild.nextElementSibling.innerHTML
+    let price=this.parentElement.parentElement.nextElementSibling.lastElementChild.lastElementChild.innerHTML
+    let basket=JSON.parse(localStorage.getItem('Wine'))
+    let exist=basket.find(item=>item.ID==id)
+    if (exist===undefined) {
+      basket.push({
+        ID:id,
+        Image:image,
+        Title:title,
+        Price:price,
+        Count:1
+      })
+      this.firstElementChild.className="fa-solid fa-check"
+      document.querySelector('.succesfully').innerHTML='<i class="fa-regular fa-circle-check"></i><span>Product was added to cart successfully!</span>'
+      document.querySelector('.succesfully').style.right='3%'
+    } 
+    else {
+      exist.Count++;
+      document.querySelector('.succesfully').innerHTML='<span>This product already exists</span>'
+      document.querySelector('.succesfully').style.right='3%'
+    }
+    localStorage.setItem('Wine', JSON.stringify(basket))
+    setTimeout(() => {
+      document.querySelector('.succesfully').style.right='-100%'
+    }, 1500);
+    ProductsNumber()
+  }
+ })
+ function ProductsNumber(){
+  let basket=JSON.parse(localStorage.getItem('Wine'))
+  let span=document.querySelectorAll('.span-bag')
+  span.forEach(item=>item.innerHTML=basket.length)
+}
+ProductsNumber()
