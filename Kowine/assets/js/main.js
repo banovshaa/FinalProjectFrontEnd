@@ -492,3 +492,90 @@ navButtons.forEach(navButton=>{
   span.forEach(item=>item.innerHTML=basket.length)
 }
 ProductsNumber()
+
+
+$(".img_producto_container")
+  // tile mouse actions
+  .on("mouseover", function() {
+    $(this)
+      .children(".img_producto")
+      .css({ transform: "scale(" + $(this).attr("data-scale") + ")" });
+  })
+  .on("mouseout", function() {
+    $(this)
+      .children(".img_producto")
+      .css({ transform: "scale(1)" });
+  })
+  .on("mousemove", function(e) {
+    $(this)
+      .children(".img_producto")
+      .css({
+        "transform-origin":
+          ((e.pageX - $(this).offset().left) / $(this).width()) * 100 +
+          "% " +
+          ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +
+          "%"
+      });
+  });
+
+  // $(document).ready(function() {
+
+  //   $('a.btn-gallery').on('click', function(event) {
+  //     event.preventDefault();
+      
+  //     var gallery = $(this).attr('href');
+      
+  //     $(gallery).magnificPopup({
+  //       delegate: 'a',
+  //       type:'image',
+  //       gallery: {
+  //         enabled: true
+  //       }
+  //     }).magnificPopup('open');
+  //   });
+    
+  // });
+
+  let images=$(".images")
+  
+ for (let img of images) {
+  img.onclick=function(e){
+    e.preventDefault()
+    let act=$(".activeImg")
+    act.removeClass("activeImg")
+    this.parentElement.classList.add("activeImg")
+    if (this.classList.contains('b-video')) {
+      $('#mainVideo').removeClass('d-none')
+      $('.img_producto').addClass('d-none')
+    } else {
+      $('#mainVideo').addClass('d-none')
+      $('.img_producto').removeClass('d-none')
+      $('.img_producto').css('background-image',`url(${this.firstElementChild.src})`)
+    }
+     
+  }
+ }
+ 
+ const tabLink = document.querySelectorAll(".tab-menu-link");
+ const tabContent = document.querySelectorAll(".tab-bar-content");
+ 
+ tabLink.forEach((item) => {
+   item.addEventListener("click", activeTab);
+ });
+ 
+ function activeTab(item) {
+   const btnTarget = item.currentTarget;
+   const content = btnTarget.dataset.content;
+ 
+   tabContent.forEach((item) => {
+     item.classList.remove("is-active");
+   });
+ 
+   tabLink.forEach((item) => {
+     item.classList.remove("is-active");
+   });
+ 
+   document.querySelector("#" + content).classList.add("is-active");
+   btnTarget.classList.add("is-active");
+ }
+ 
