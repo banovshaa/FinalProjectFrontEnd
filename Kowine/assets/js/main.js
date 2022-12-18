@@ -431,20 +431,49 @@ let btnLog=document.querySelector('.button-login').addEventListener('click',func
 
 
 /////////////////////////////////////////////////////////////
+// let boxes=document.querySelectorAll('.products-content .box')
+//  var items = $(".mainContent .products-content");
+//  var numItems = items.length;
+//  var perPage = 1;
+//  items.slice(perPage).hide();
 
-let prLists=document.querySelectorAll('.products-content')
-let navButtons =document.querySelectorAll('.left-foot-part span')
-let titleText=document.querySelector('.left-head-part p')
-let boxes=document.querySelectorAll('.products-content .box')
-let title;
-let filterIcons=document.querySelectorAll('.s-icons')
-filterIcons.forEach(icon=>{
-  icon.addEventListener('click',function(){
-    let active=document.querySelector('.activeIcon')
-    active.classList.remove('activeIcon')
-    this.classList.add('activeIcon')
-  })
-})
+//  $('#pagination-container').pagination({
+//      items: numItems,
+//      itemsOnPage: perPage,
+//      prevText: "&lt",
+//      nextText: "&gt;",
+//      onPageClick: function (pageNumber) {
+      
+//          var showFrom = perPage * (pageNumber - 1);
+//          var showTo = showFrom + perPage;
+//          items.hide().slice(showFrom, showTo).show();
+         
+//          if (pageNumber===1) {
+//           $('.prev').css('display','none')
+//           $('.left-head-part p').html(`Showing 1 - ${items[0].querySelectorAll('.box').length} of ${boxes.length} items`)
+//          } else if(pageNumber===3){
+//           $('.next').css('display','none')
+//           $('.prev').css('display','block')
+//           $('.left-head-part p').html(`Showing ${boxes.length-items[items.length-1].querySelectorAll('.box').length+1} - ${boxes.length} of ${boxes.length} items`)
+//          }
+//          else{
+//           $('.prev').css('display','block')
+//           $('.left-head-part p').html(`Showing ${items[0].querySelectorAll('.box').length+1} - ${boxes.length-items[items.length-1].querySelectorAll('.box').length} of ${boxes.length} items`)
+//          }
+//      }
+//  });
+
+ 
+// ///////////////////////
+
+// let filterIcons=document.querySelectorAll('.s-icons')
+// filterIcons.forEach(icon=>{
+//   icon.addEventListener('click',function(){
+//     let active=document.querySelector('.activeIcon')
+//     active.classList.remove('activeIcon')
+//     this.classList.add('activeIcon')
+//   })
+// })
 
 // document.querySelector('#sort-1').addEventListener('click',function(){
 //   boxes.forEach(box=>{
@@ -460,49 +489,8 @@ filterIcons.forEach(icon=>{
 //   boxes.forEach(box=>{
 //   box.parentElement.classList.value='col-xl-3 col-lg-4 col-md-4 col-6'
 //   })
-// })
 
-
-navButtons.forEach(navButton=>{
-  navButton.addEventListener('click',function(){
-    prLists.forEach(prList=>{
-      if (navButton.getAttribute('data-id')!=='1') {
-        navButtons[0].classList.remove('d-none')
-        titleText.innerHTML=`Showing 1 - ${prLists[0].querySelectorAll('.box').length} of ${boxes.length} item(s)`;
-      }
-      else{
-        navButtons[0].classList.add('d-none')
-      }
-      if (navButton.getAttribute('data-id')!=navButtons.length-2) {
-        navButtons[navButtons.length-1].classList.remove('d-none')
-      }
-      else{
-        navButtons[navButtons.length-1].classList.add('d-none')
-        titleText.innerHTML=`Showing ${boxes.length-prLists[prLists.length-1].querySelectorAll('.box').length+1} - ${boxes.length}  of ${boxes.length} item(s)`;
-      }
-      if (prList.id===navButton.getAttribute('data-id')) {
-        prList.classList.remove('d-none')
-        title=`Showing ${prLists[Number(prList.id)-1].querySelectorAll('.box').length+1} - ${boxes.length-prLists[prLists.length-1].querySelectorAll('.box').length}  of ${boxes.length} item(s)`;
-
-      }
-      else{
-        prList.classList.add('d-none')
-      }
-      titleText.innerHTML=title;
-     })
-  })
- })
-
- navButtons.forEach(navButton=>{
-  navButton.addEventListener('click',function(){
-    let activeBtn=document.querySelector('.activePage');
-    activeBtn.classList.remove('activePage');
-    this.classList.add('activePage');
-  })
- })
-
-
-
+////////////////////////////
 
  if (localStorage.getItem('Wine')===null) {
   localStorage.setItem('Wine',JSON.stringify([]))
