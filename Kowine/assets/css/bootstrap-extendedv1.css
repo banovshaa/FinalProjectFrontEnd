@@ -23762,7 +23762,10 @@ textarea.form-control-lg {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
+.py-150px {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
 .py-1rem {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -36025,6 +36028,10 @@ textarea.form-control-lg {
   .py-md-100px {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+  .py-md-200px {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
   .py-md-1rem {
     padding-top: 1rem;
@@ -51298,6 +51305,9 @@ textarea.form-control-lg {
   .pt-lg-100px {
     padding-top: 100px;
   }
+  .pt-lg-290px {
+    padding-top: 290px;
+  }
   .pb-lg-1px {
     padding-bottom: 1px;
   }
@@ -51597,6 +51607,9 @@ textarea.form-control-lg {
   }
   .pb-lg-100px {
     padding-bottom: 100px;
+  }
+  .pb-lg-210px {
+    padding-bottom: 210px;
   }
   .ps-lg-1px {
     padding-left: 1px;

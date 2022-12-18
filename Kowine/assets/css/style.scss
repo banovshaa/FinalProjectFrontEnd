@@ -125,6 +125,16 @@
                 text-decoration: line-through;
                 margin-right: 5px;
             }
+            .stars{
+                i{
+                    color: $span-color;
+                }
+            }
+            .nostars{
+                i{
+                    color: #E1E1E1;
+                }
+            }
             .review{
                 color: #a3a3a3;
                 font-size: 12px;
@@ -456,6 +466,14 @@
     .slider-products2, .slider-products{
         @extend .common_box;
     }
+    .slider-products{
+        .box-text{
+            a{
+                padding:0 3rem;
+            }
+           
+        }
+    }
     #Third{
         .third-all{
             .slick-track{
@@ -718,14 +736,13 @@
     .d-content{
         text-align: center;
         background: #ffffff url("https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/06/about.jpg") no-repeat fixed center;
-        padding: 290px 0 210px;
         p{
             color: #fff;
+            font-size: 18px;
+            letter-spacing: 3px;
         }
         h1{
             color: #fff;
-            font-size: 4rem;
-            width: 50%;
             margin: 10px auto 50px;
         }
         .d-arrow{
@@ -740,6 +757,7 @@
     .story-all{
         padding: 45px 0 70px;
         border-bottom: 1px solid $bg-before;
+        background: url("https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/06/about-us.jpg") top right / cover no-repeat;
         .s-text{
             h3{
                 font-size: 20px;
@@ -747,10 +765,9 @@
                 line-height: 24px;
             }
             h2{
-                font-size: 50px;
-                line-height: 60px;
+                //font-size: 50px;
+                //line-height: 60px;
                 margin: 10px 0 15px;
-                width: 70%;
             }
             p{
                 font-family: Open Sans,sans-serif;
@@ -782,6 +799,7 @@
                         left: 50%;
                         transform: translate(-50%,-50%);
                         z-index: 22;
+                        width: 100%;
                         a{
                             @include common-icons-contact(transparent,#fff);
                             display: none;
@@ -843,7 +861,7 @@
                     p{
                     font-family: Open Sans,sans-serif;
                         color: $btn-color1;
-                        font-size: 16px;
+                        font-size: 14px;
                     }
                 }
             }
@@ -926,10 +944,11 @@
                 i{
                     display: inline-block;
                     @include common_stars(#fff,52px);
-                    transform: translateY(-15%);
+                    transform: translateY(-22%);
                 }
             }
             .text{
+                width: 100%;
                 margin: 0 30px;
                 h2{
                     font-size: 30px;
@@ -997,7 +1016,6 @@
         .left-box{
             padding: 65px 0 15px;
             .text-upper{
-                width: 80%;
                 h2{
                     font-size: 30px;
                 }
@@ -1024,6 +1042,7 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
+                        margin-top: 8px;
                         h4{
                             font-size: 18px;
                             line-height: 20px;
@@ -1034,7 +1053,6 @@
         }
         
         .right-box{
-            padding: 70px 70px 80px 70px;
             transform: translateY(-15%);
             .send{
                 text-align: center;
@@ -1117,12 +1135,10 @@
         }
         .imgList{
             label{
-                width: 120px;
-                height: 100px;
+                width: 100%;
                 img{
-                    height: 100px;
-                    padding: 10px;
-                    object-fit: cover;
+                    height: 100%;
+                    object-fit: contain;
                 }
             }
         }
@@ -1309,6 +1325,10 @@
         a{
             color: $mega-text;
             font-size: 14px;
+            transition: .3s ease;
+            &:hover{
+                color: $btn-color1;
+            }
         }
         p{
             color: $btn-color1;
@@ -1406,6 +1426,14 @@
                             border: 1px solid rgba(0,0,0,.15);
                             border-radius: 0;
                             font-size: 14px;
+                            .dropdown-item{
+                                color: $mega-text;
+                                background-color: #fff;
+                                transition: .3s ease;
+                                &:hover{
+                                    color: $btn-color1;
+                                }
+                            }
                         }
                     }
                 }
@@ -1553,8 +1581,8 @@
         .d-left-top{
             position: relative;
             .img_producto_container {
-                height:767.164px;
-                width:767.164px;
+                height:464px;
+                width:100%;
                 position: relative;
                 overflow: hidden;
                 border: 1px solid #ddd;
@@ -1627,15 +1655,19 @@
     .details-right{
         padding: 50px 15px 0 50px;
         .d-right-top{
-           .breadcrumb-item{
+           nav{
             color: #000;
             font-weight: 600;
             font-size: 13px;
-            &::before{
-                font-size: 13px;
+            span{
+                padding-right:3px;
             }
             a{
                 color: $mega-text;
+                cursor: pointer;
+                &:hover{
+                    color:$btn-color1;
+                }
             }
            }
            .rev{
@@ -1802,6 +1834,11 @@
             }
             span{
                 color: $mega-text;
+            }
+            i{
+                &:hover{
+                    color: $btn-color1;
+                }
             }
         }
     }
@@ -2092,6 +2129,13 @@
         
     }
 }
+@media (min-width:1200px) {
+    #DetailsFirst{
+        .img_producto_container{
+            height: 768.164px!important;
+        }
+    }
+}
 @media (max-width:1200px) {
     #Fourth{
         .f-text{
@@ -2112,6 +2156,19 @@
             p{
                 display: none;
             }
+        }
+    }
+    .slider-client{
+        .slick-prev{
+            left: 0%!important;
+        }
+        .slick-next{
+            right: 0%!important;
+        }
+    }
+    #DetailsFirst{
+        .img_producto_container{
+            height: 557.164px!important;
         }
     }
 }
@@ -2144,6 +2201,31 @@
             opacity: 1!important;
             visibility: visible!important;
         }
+        #DetailsFirst{
+            .img_producto_container{
+                height: 953px!important;
+            }
+        }
+        #DetailsSecond{
+            .tab-menu-link{
+               border: none!important;
+               &:hover{
+                &::after{
+                    width: 0%!important;
+                }
+                span{
+                    color: #000!important;
+                }
+              }
+            }
+        }
+        #DetailsThird{
+            .slick-arrow{
+                opacity: 1!important;
+                visibility: visible!important;
+            }
+        }
+       
 }
 @media (min-width:992px) {
         .carousel-item{
@@ -2174,6 +2256,25 @@
     .sidebarfilter-all{
         width: 260px;
     }
+    #CustomerService{
+        .right-box{
+            transform: translateY(0)!important;
+            margin:0 15px 5rem 15px;
+        }
+    }
+    #DetailsFirst{
+        .img_producto_container{
+            height: 588px!important;
+        }
+    }
+    #DetailsThird{
+        .slick-arrow{
+            &::before{
+                font-size: 14px;
+            }
+        }
+    }
+    
 }
 @media(max-width:576px){
     .third-all{
