@@ -281,12 +281,32 @@ header{
         }
     }
 }
-.toggleForm{
+
+.allForms{
+   position: absolute;
+   right: 13%;
+   top: 12%;
+   display: none;
+}
+.activeForm{
+    opacity: 1!important;
+    visibility: visible!important;
+    transform: translateX(0)!important;
+}
+#Register{
+    transform: translateX(-5%);
+}
+#SignIn{
+    transform: translateX(5%);
+}
+.toggleForm,.toggleForm2{
     position: absolute;
-    right: 13%;
-    top: 12%;
+    opacity: 0;
+    visibility: hidden;
+    right: 0%;
+    top: 0%;
+    transition: .5s ease;
     z-index: 99999;
-    display: none;
     width: 400px;
     max-width: 400px;
     background-color: #fff;
@@ -389,7 +409,7 @@ header{
         }
        }
        }
-       .button-login{
+       .button-login, .button-register{
         button{
             background-color: #000;
             color: #fff;
@@ -406,6 +426,7 @@ header{
         }
     }
     }
+   
 }
 footer{
     .footer-all{

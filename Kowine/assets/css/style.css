@@ -252,12 +252,35 @@ header .header-third .bag .bi-bag {
   line-height: 43px;
 }
 
-.toggleForm {
+.allForms {
   position: absolute;
   right: 13%;
   top: 12%;
-  z-index: 99999;
   display: none;
+}
+
+.activeForm {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(0) !important;
+}
+
+#Register {
+  transform: translateX(-5%);
+}
+
+#SignIn {
+  transform: translateX(5%);
+}
+
+.toggleForm, .toggleForm2 {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  right: 0%;
+  top: 0%;
+  transition: 0.5s ease;
+  z-index: 99999;
   width: 400px;
   max-width: 400px;
   background-color: #fff;
@@ -265,32 +288,32 @@ header .header-third .bag .bi-bag {
   border-top: 2px solid #BFA483;
   padding: 30px;
 }
-.toggleForm .f-top {
+.toggleForm .f-top, .toggleForm2 .f-top {
   margin-bottom: 15px;
 }
-.toggleForm .f-top span {
+.toggleForm .f-top span, .toggleForm2 .f-top span {
   font-size: 19px;
   color: #000;
 }
-.toggleForm .f-top a {
+.toggleForm .f-top a, .toggleForm2 .f-top a {
   font-size: 16px;
   color: #BFA483;
 }
-.toggleForm .f-content * {
+.toggleForm .f-content *, .toggleForm2 .f-content * {
   font-family: "Open Sans", sans-serif;
 }
-.toggleForm .f-content .fc-box {
+.toggleForm .f-content .fc-box, .toggleForm2 .f-content .fc-box {
   margin-bottom: 20px;
 }
-.toggleForm .f-content .fc-box label {
+.toggleForm .f-content .fc-box label, .toggleForm2 .f-content .fc-box label {
   margin: 0 0 5px;
   font-size: 14px;
   color: #868686;
 }
-.toggleForm .f-content .fc-box label span {
+.toggleForm .f-content .fc-box label span, .toggleForm2 .f-content .fc-box label span {
   color: #ff4a4a;
 }
-.toggleForm .f-content .fc-box input {
+.toggleForm .f-content .fc-box input, .toggleForm2 .f-content .fc-box input {
   padding: 0 20px;
   width: 100%;
   height: 45px;
@@ -299,10 +322,10 @@ header .header-third .bag .bi-bag {
   font-size: 14px;
   border: 1px solid #ddd;
 }
-.toggleForm .f-content .remember-all .round {
+.toggleForm .f-content .remember-all .round, .toggleForm2 .f-content .remember-all .round {
   position: relative;
 }
-.toggleForm .f-content .remember-all .round label {
+.toggleForm .f-content .remember-all .round label, .toggleForm2 .f-content .remember-all .round label {
   background-color: #fff;
   border: 2px solid #868686;
   border-radius: 100%;
@@ -313,7 +336,7 @@ header .header-third .bag .bi-bag {
   position: absolute;
   top: 0;
 }
-.toggleForm .f-content .remember-all .round label::after {
+.toggleForm .f-content .remember-all .round label::after, .toggleForm2 .f-content .remember-all .round label::after {
   content: "Remember me";
   position: absolute;
   top: -6px;
@@ -321,25 +344,25 @@ header .header-third .bag .bi-bag {
   font-size: 14px;
   width: 100px;
 }
-.toggleForm .f-content .remember-all .round input[type=checkbox] {
+.toggleForm .f-content .remember-all .round input[type=checkbox], .toggleForm2 .f-content .remember-all .round input[type=checkbox] {
   visibility: hidden;
 }
-.toggleForm .f-content .remember-all .round input[type=checkbox]:checked + label {
+.toggleForm .f-content .remember-all .round input[type=checkbox]:checked + label, .toggleForm2 .f-content .remember-all .round input[type=checkbox]:checked + label {
   background-color: #BFA483;
   border-color: #868686;
 }
-.toggleForm .f-content .remember-all .round input[type=checkbox]:checked + label:after {
+.toggleForm .f-content .remember-all .round input[type=checkbox]:checked + label:after, .toggleForm2 .f-content .remember-all .round input[type=checkbox]:checked + label:after {
   opacity: 1;
 }
-.toggleForm .f-content .remember-all .lostpassword {
+.toggleForm .f-content .remember-all .lostpassword, .toggleForm2 .f-content .remember-all .lostpassword {
   padding-bottom: 15px;
 }
-.toggleForm .f-content .remember-all .lostpassword a {
+.toggleForm .f-content .remember-all .lostpassword a, .toggleForm2 .f-content .remember-all .lostpassword a {
   font-size: 13px;
   color: #000;
   position: relative;
 }
-.toggleForm .f-content .remember-all .lostpassword a::before {
+.toggleForm .f-content .remember-all .lostpassword a::before, .toggleForm2 .f-content .remember-all .lostpassword a::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -351,11 +374,11 @@ header .header-third .bag .bi-bag {
   transition: 0.3s ease;
   bottom: 0;
 }
-.toggleForm .f-content .remember-all .lostpassword a:hover::before {
+.toggleForm .f-content .remember-all .lostpassword a:hover::before, .toggleForm2 .f-content .remember-all .lostpassword a:hover::before {
   width: 50%;
   background-color: #BFA483;
 }
-.toggleForm .f-content .button-login button {
+.toggleForm .f-content .button-login button, .toggleForm .f-content .button-register button, .toggleForm2 .f-content .button-login button, .toggleForm2 .f-content .button-register button {
   background-color: #000;
   color: #fff;
   cursor: pointer;
@@ -366,7 +389,7 @@ header .header-third .bag .bi-bag {
   height: 45px;
   transition: 0.3s ease;
 }
-.toggleForm .f-content .button-login button:hover {
+.toggleForm .f-content .button-login button:hover, .toggleForm .f-content .button-register button:hover, .toggleForm2 .f-content .button-login button:hover, .toggleForm2 .f-content .button-register button:hover {
   background-color: #BFA483;
 }
 

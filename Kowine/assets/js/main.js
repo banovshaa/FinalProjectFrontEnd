@@ -194,9 +194,19 @@ $('#head-search').click(function(){
   $('.toggleSearch').fadeToggle(100)
 });
 $('#loginRegister').click(function(e){
-  e.preventDefault();
-  $('.toggleForm').fadeToggle(100)
+  e.preventDefault()
+  $('.allForms').fadeToggle(100)
 });
+$('.create').click(function (e) {
+  e.preventDefault()
+  this.parentElement.parentElement.classList.remove('activeForm')
+  document.querySelector('#Register').classList.add('activeForm')
+})
+$('.already').click(function (e) {
+  e.preventDefault()
+  this.parentElement.parentElement.classList.remove('activeForm')
+  document.querySelector('#SignIn').classList.add('activeForm')
+})
 $('.hiddenFilter').click(function(e){
   e.preventDefault();
   $('.sidebarfilter-all').css("transform", `translateX(0)`); 
@@ -204,6 +214,7 @@ $('.hiddenFilter').click(function(e){
 $('#closeFilter').click(function(){
   $('.sidebarfilter-all').css("transform", `translateX(-400px)`); 
 })
+
 $(window).scroll(function(){
   if ($('html, body').scrollTop()>20) {
     $('.scroll-el').fadeIn(400);
@@ -359,24 +370,68 @@ sliders.forEach( function(slider) {
 let val=$('.feat-name').text()
 let newVal= val.length>30?val=val.slice(0,30)+'...':val;
 $('.feat-name').text(newVal)
-
+/////////////////////////////////////////////////////////
+//users storage
 
 if(JSON.parse(localStorage.getItem('Users'))===null) {
   localStorage.setItem('Users',JSON.stringify([]))
-} else {
-  let btn=document.querySelector('.button-login')
-  btn.onclick=function(e){
+} 
+else {
+  let btnReg=document.querySelector('.button-register')
+  btnReg.onclick=function(e){
     e.preventDefault();
-    let username=document.getElementById('username').value
-    let password=document.getElementById('password').value
     let users=JSON.parse(localStorage.getItem('Users'))
-    users.push({
-      Username:username,
-      Password:password
-    })
-    localStorage.setItem('Users',JSON.stringify(users))
+    let email=document.getElementById('email').value
+    let password=document.getElementById('password').value
+    let exist_user=users.find(user=>user.Email===email)
+    if (exist_user===undefined) {
+      if (email.trim().length!==0&&password.trim().length!==0) {
+        users.push({
+          Email:email,
+          Password:password
+        })
+        localStorage.setItem('Users',JSON.stringify(users))
+        alert('You Have Registered Successfully!')
+      }
+      else{
+        alert('Please Fill Boxes!')
+      }
+    } 
+    else {
+        alert('This Email Address Already Exists!')
+    }
   }
 }
+
+let btnLog=document.querySelector('.button-login').addEventListener('click',function(e){
+  e.preventDefault();
+  let users=JSON.parse(localStorage.getItem('Users'))
+  let email=document.querySelector('#logemail').value.toLowerCase()
+  let password=document.querySelector('#logpassword').value.toLowerCase()
+  let myUser;
+  users.forEach(user=>{
+   if (user.Email.toLowerCase()==email&&user.Password.toLowerCase()==password) {
+    return myUser=user
+   } 
+  })
+  if (email.trim().length===0||password.trim().length===0) {
+    alert('Please Fill Boxes!')
+  }
+  else{
+    if (myUser===undefined) {
+      alert('Invalid Email Address Or Password!')
+      document.querySelector('#loginRegister').innerHTML='LOGIN / REGISTER'
+     }
+      else {
+      document.querySelector('#loginRegister').innerHTML='LOGOUT'
+     }
+  }
+  
+})
+
+
+/////////////////////////////////////////////////////////////
+
 let prLists=document.querySelectorAll('.products-content')
 let navButtons =document.querySelectorAll('.left-foot-part span')
 let titleText=document.querySelector('.left-head-part p')

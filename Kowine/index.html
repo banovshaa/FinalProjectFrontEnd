@@ -322,19 +322,20 @@
                 </div>
             </nav>
         </div>
-        <div class="toggleForm">
+        <div class="allForms">
+          <div class="toggleForm activeForm" id="SignIn">
             <div class="f-top d-flex justify-content-between align-items-center">
               <span>Sing In</span>
-              <a href="">Create An Account</a>
+              <a href="" class="create">Create An Account</a>
             </div>
             <div class="f-content">
               <div class="fc-box">
                   <label>Username or email <span>*</span></label>
-                  <input type="text" class="input-text" id="username" placeholder="Your name">
+                  <input id="logemail" type="text" class="input-text"  placeholder="Your name">
               </div>
               <div class="fc-box">
                 <label>Password <span>*</span></label>
-                <input  type="password" id="password" placeholder="Password">
+                <input id="logpassword" type="password"  placeholder="Password">
               </div>
               <div class="remember-all d-flex justify-content-between align-items-center">
                 <div class="round">
@@ -349,7 +350,27 @@
                 <button>LOGIN</button>
               </div>
             </div>
-      </div>
+          </div>
+          <div class="toggleForm2" id="Register" style="padding-bottom: 70px;">
+            <div class="f-top d-flex justify-content-between align-items-center">
+              <span>Register</span>
+              <a href="" class="already">Already has an account</a>
+            </div>
+            <div class="f-content">
+              <div class="fc-box">
+                  <label>Email <span>*</span></label>
+                  <input type="email" class="input-text" id="email" placeholder="Email">
+              </div>
+              <div class="fc-box">
+                <label>Password <span>*</span></label>
+                <input  type="password" id="password" placeholder="Password">
+              </div>
+              <div class="button-register">
+                <button>REGISTER</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="toggleSearch"> 
           <div class="ts-box">
             <button id="srchBtn"><i class="bi bi-search"></i></button>
