@@ -9,7 +9,7 @@ function GetProducts(){
     } 
     else {
         document.querySelector('.empty-cart').classList.add('d-none')
-        document.querySelector('#mainTable').classList.remove('d-none')
+        document.querySelector('.basketfirst-all').classList.remove('d-none')
         document.querySelector('#clearAll').classList.remove('d-none')
         let html=``
         for (const item of basket) {

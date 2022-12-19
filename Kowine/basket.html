@@ -31,7 +31,7 @@
                               <div class="col-md-6 col-lg-10 mb-3 mb-lg-0">
                                 <div class="list-group list-group-flush">
                                   <a href="" >Home Categories</a>
-                                  <a href="" >Home Classic</a>
+                                  <a href="index.html" >Home Classic</a>
                                   <a href="" >Home Clean</a>
                                   <a href="" >Home Elegant</a>
                                   <a href="">Home Modern</a>
@@ -53,7 +53,7 @@
                               <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                                 <div class="list-group list-group-flush">
                                   <h4>Shop Style</h4>
-                                    <a href="">Shop Standard</a>
+                                    <a href="shop.html">Shop Standard</a>
                                     <a href="">Shop Full</a>
                                     <a href="">Shop Only Categories</a>
                                     <a href="">Shop Icon Categories</a>
@@ -261,8 +261,8 @@
                             <div class="row">
                               <div class="col-md-6 col-lg-10 mb-3 mb-lg-0">
                                 <div class="list-group list-group-flush">
-                                  <a href="" >About Us</a>
-                                  <a href="" >Contact</a>
+                                  <a href="about.html" >About Us</a>
+                                  <a href="contact.html" >Contact</a>
                                   <a href="" >Faq</a>
                                   <a href="" >Page 404</a>
                                 </div>
@@ -290,7 +290,7 @@
                 </div>
             </nav>
         </div>
-        <div class="allForms">
+        <div class="allForms" style="top: 8%;">
           <div class="toggleForm activeForm" id="SignIn">
             <div class="f-top d-flex justify-content-between align-items-center">
               <span>Sing In</span>
@@ -374,6 +374,71 @@
           </div>
     </header>
     <main>
+      <section id="Sidebar">
+        <div class="sidebar-all">
+            <div class="head-sidebar text-end">
+              <h4 id='close-s'>CLOSE  <span><i class="bi bi-x"></i></span></h4>
+            </div>
+            <div class="menu-sidebar">
+              <ul id="main-list">
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="index.html">HOME</a>
+                  <i id="pass"class="bi bi-chevron-right"></i>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="shop.html">SHOP</a>
+                  <i class="bi bi-chevron-right"></i>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="details.html">PRODUCT</a>
+                  <i class="bi bi-chevron-right"></i>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="">BLOG</a>
+                  <i class="bi bi-chevron-right"></i>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="">PAGE</a>
+                  <i class="bi bi-chevron-right"></i>
+                </li>
+              </ul>
+              <div id="sub-sidebar" class="hidden-list">
+                <div class="head-sidebar second-head">
+                  <a href="" id="back-btn">
+                    <i class="bi bi-chevron-left"></i>
+                  </a>
+                  <a href="index.html" id="sub-title">HOME</a>
+                </div>
+                  <ul id="second-list">
+                    <li>
+                      <a href="">Home Categories</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Home Classic</a>
+                    </li>
+                    <li>
+                      <a href="">Home Clean</a>
+                    </li>
+                    <li>
+                      <a href="">Home Elegant</a>
+                    </li>
+                    <li>
+                      <a href="">Home Modern</a>
+                    </li>
+                    <li>
+                      <a href="">Home Stronger</a>
+                    </li>
+                    <li>
+                      <a href="">Home Stylish</a>
+                    </li>
+                    <li>
+                      <a href="">Home Unique</a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+      </section>
       <section id="EmptyCart">
         <div class="empty-cart text-center my-5rem d-none">
           <h2>Your Cart is Empty!</h2>
@@ -384,12 +449,12 @@
         </div>
       </section>
       <section id="BasketFirst">
-        <div class="basketfirst-all">
+        <div class="basketfirst-all d-none">
          <h2>Shopping Cart(<span id="cartTotal"></span>)</h2> 
          <div class="container">
           <div class="row my-3 g-5">
             <div class="col-xl-8 col-lg-12 col-md-12 col-12">
-              <table id="mainTable" class="d-none">
+              <table id="mainTable">
                 <thead>
                   <tr>
                     <th>Product</th>
