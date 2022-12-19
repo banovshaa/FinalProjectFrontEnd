@@ -51,7 +51,7 @@
                 span{
                     position: absolute;
                     z-index: 2;
-                    color: #fff;
+                    color: $white;
                     padding: 1px 12px;
                     font-weight: 500;
                     font-size: 14px;
@@ -86,14 +86,14 @@
                 height: 45px;
                 line-height: 45px;
                 border: 1px solid #e6e6e6;
-                background-color: #fff;
+                background-color: $white;
                 text-align: center;
                 margin-bottom: 5px;
                 transition: .3s ease;
                 &:hover{
                     background-color:$btn-color1;
                     i{
-                        color: #fff;
+                        color: $white;
                     }
                 }&:first-child{
                     transition-delay: .1s;
@@ -132,7 +132,7 @@
             }
             .nostars{
                 i{
-                    color: #E1E1E1;
+                    color: $border2;
                 }
             }
             .review{
@@ -145,7 +145,7 @@
                 text-transform: uppercase;
                 display: inline-block;
                 width: 79%;
-                color: #000;
+                color: $text-main;
                 font-size: 12px;
                 letter-spacing: .1em;
                 margin: 2px auto 7px;
@@ -181,22 +181,22 @@
     height: 30px;
     border: none;
     outline: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid $white;
     font-size: 14px;
-    color: #fff;
+    color: $white;
     background: transparent;
-    font-family:Open Sans,sans-serif;
+    font-family:$second-font;
    
 }
 .activePage{
-    border: 1px solid #000;
-    background-color: #000;
-    color: #fff!important;
+    border: 1px solid $text-main;
+    background-color: $text-main;
+    color: $white!important;
 }
 .activeIcon{
-    color: #000!important;
+    color: $text-main!important;
     i{
-        color: #000!important;
+        color: $text-main!important;
     }
 }
 @mixin common_stars($color,$fontSize){
@@ -213,21 +213,21 @@
         z-index: 9999;
         box-shadow: 0 1px 12px 2px hsl(0deg 0% 56% / 30%);
         width: 280px;
-        background-color: #fff;
+        background-color: $white;
         .head-sidebar{
             background-color: $btn-color1;
             padding: 10px 20px 15px;
             cursor: pointer;
             h4{
                 display: inline-block;
-                color: #fff;
+                color: $white;
                 font-size: 13px;
                 font-family: Open Sans,sans-serif;
                 font-weight: 300;
                 span{
                     margin-left: 3px;
                     i{
-                        @include common_stars(#fff, 25px);                   
+                        @include common_stars($white, 25px);                   
                     }
                 }
             }
@@ -244,7 +244,7 @@
                     a{
                         font-size: 14px;
                         line-height: 30px;
-                        color: #000;
+                        color: $text-main;
                     }
                     i{
                         font-size: 12px;
@@ -265,7 +265,7 @@
         top: 0;
         transition: .3s ease;
         .second-head{
-            background-color: #fff;
+            background-color: $white;
             position: relative;
             text-align: center;
             i{
@@ -390,18 +390,18 @@
                 .carousel-caption{
                     width: 100%;
                     h5{
-                        color: #fff;
+                        color: $white;
                     }
                     p{
-                        color: #fff;
+                        color: $white;
                         margin: 1rem 0 1.5rem;
                     }
                     a{
-                    color: #fff;
+                    color: $white;
                     letter-spacing: 2px;
                     font-size: 14px;
                     border-radius: 0;
-                    border:2px solid #fff;
+                    border:2px solid $white;
                     transition: .3s ease;
                     &:hover{
                         background-color: $btn-color1;
@@ -413,15 +413,15 @@
             .icon-b{
                 transition: .5s ease;
                 i{
-                    @include common_stars(#fff,20px );
-                    border: 1px solid #fff;
+                    @include common_stars($white,20px );
+                    border: 1px solid $white;
                     padding:6px 10px 8px;
                     border-radius: 100%;
                 }
                 &:hover{
                     i{
-                        color: #000;
-                        background-color: #fff;
+                        color: $text-main;
+                        background-color: $white;
                     }
                 }
             }
@@ -456,7 +456,7 @@
                         height: 58px;
                         min-width: 148px;
                         padding: 0 15px;
-                        background: #fff;
+                        background: $white;
                     }
                 }
             }
@@ -509,7 +509,7 @@
                 top: 50%;
                 transform: translate(-50%,-50%);
                 h3{
-                    color: #fff;
+                    color: $white;
                     font-size: 34px;
                     line-height: 41px;
                     span{
@@ -523,7 +523,7 @@
                     text-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
                     background-color: $btn-color2;
                     border-radius: 5px;
-                    color: #fff;
+                    color: $white;
                     padding: 10px 20px;
                     transition: .6s ease;
                     &:hover{
@@ -556,7 +556,7 @@
             content: '\f054';
             font-size: 30px;
             font-weight: 900;
-            color: #000;
+            color: $text-main;
             opacity: 0;
             transition: .6s ease;
         }
@@ -568,7 +568,7 @@
             content: '\f053';
             font-size: 30px;
             font-weight: 900;
-            color: #000;
+            color: $text-main;
             opacity: 0;
             transition: .6s ease;
         }
@@ -620,13 +620,13 @@
                 span{
                     display: inline-block;
                     padding: 30px;
-                    border: 1px solid #fff;
+                    border: 1px solid $white;
                     border-radius: 100%;
                     
                     svg{
                         width: 3rem;
                         height: 3rem;
-                        fill: #FFFF;
+                        fill: $white;
                     }
                     &:hover{
                         animation: move .6s  ;
@@ -635,14 +635,14 @@
             }
             .s-text{
                h4{
-                color: #fff;
+                color:$white;
                 line-height: 26px;
                 font-size: 20px;
                 margin:15px 0 6px;
                }
                p{
-                font-family:Open Sans,sans-serif;
-                color: #fff;
+                font-family:$second-font;
+                color: $white;
                 line-height: 20px;
                 font-size: 14px;
                }
@@ -661,14 +661,14 @@
             .e-text{
                 text-align: center;
                 i{
-                    @include common_stars(#fff,52px );
+                    @include common_stars($white,52px );
                 }
                 h3{
-                    color: #fff;
+                    color: $white;
                     font-size: 30px;
                     margin: 12px 0 7px;
                 }p{
-                    color: #fff;
+                    color: $white;
                     font-size: 16px;
                 }
             }
@@ -677,7 +677,7 @@
                     @extend .common_inp;
                     width: 100%;
                     &::placeholder{
-                        color: #fff;
+                        color: $white;
                     }
                 }
                 button{
@@ -737,18 +737,18 @@
         text-align: center;
         background: #ffffff url("https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/06/about.jpg") no-repeat fixed center;
         p{
-            color: #fff;
+            color: $white;
             font-size: 18px;
             letter-spacing: 3px;
         }
         h1{
-            color: #fff;
+            color: $white;
             margin: 10px auto 50px;
         }
         .d-arrow{
             animation:moving 3s ease-in infinite;
             i{
-                @include common_stars(#fff,25px );
+                @include common_stars($white,25px );
             }
         }
     }
@@ -801,7 +801,7 @@
                         z-index: 22;
                         width: 100%;
                         a{
-                            @include common-icons-contact(transparent,#fff);
+                            @include common-icons-contact(transparent,$white);
                             display: none;
                             text-align: center;
                             line-height: 42px;
@@ -943,7 +943,7 @@
             .icon{
                 i{
                     display: inline-block;
-                    @include common_stars(#fff,52px);
+                    @include common_stars($white,52px);
                     transform: translateY(-22%);
                 }
             }
@@ -953,11 +953,11 @@
                 h2{
                     font-size: 30px;
                     line-height: 30px;
-                    color: #fff;
+                    color: $white;
                 }
                 p{
                     font-size: 16px;
-                    color: #fff;
+                    color: $white;
                 }
             }
         }
@@ -971,7 +971,7 @@
                 padding: 2rem 25px 4rem;
                 height: 55px;
                 font-size: 14px;
-                background: #fff;
+                background: $white;
                
             }
             button{
@@ -980,12 +980,12 @@
                 top: 0;
                 border: 0;
                 padding: 0 40px;
-                background: #000;
+                background: $text-main;
                 height: 55px;
                 line-height: 55px;
                 font-size: 14px;
                 text-transform: uppercase;
-                color: #fff;
+                color: $white;
                 &:hover{
                     background-color: #c0a483;
                 }
@@ -1062,12 +1062,12 @@
                     svg{
                         width: 100%;
                         vertical-align: bottom;
-                        fill: #fff;
+                        fill: $white;
                     }
                 }
                 h2{
                     font-size: 30px;
-                    color: #fff;
+                    color: $white;
                 }
             }
             .message-box{
@@ -1078,7 +1078,7 @@
                     font-size: 13px;
                     line-height: 30px;
                     padding: 10px 20px;
-                    color:#fff;
+                    color:$white;
                     background-color: transparent;
                     outline: 0;
                     border: 1px solid #444548;
@@ -1090,14 +1090,14 @@
                     outline: 0;
                     border: 1px solid #444548;
                     font-size: 13px;
-                    color:#fff;
+                    color:$white;
                     margin: 20px 0 25px;
                 }
                 button{
                     width: 100%;
                     height: 55px;
                     background-color: $mega-text;
-                    color:#fff;
+                    color:$white;
                 }
             }
         }
@@ -1117,7 +1117,7 @@
         max-height: 100vh;
         overflow-y: auto;
         padding: 30px 30px 50px 30px;
-        background-color: #fff;
+        background-color: $white;
         box-shadow: 0 1px 12px 2px hsl(0deg 0% 56% / 30%);
         .s-filter-head{
            margin-bottom: 50px;
@@ -1125,7 +1125,7 @@
             cursor: pointer;
             display: inline-block;
             span{
-                font-family: Open Sans,sans-serif;
+                font-family: $second-font;
                 font-size: 10px;
                  i{
                      font-size: 15px;
@@ -1151,26 +1151,26 @@
         margin-bottom: 60px;
         h2{
             font-size:60px ;
-            color: #fff;
+            color: $white;
         }
         .navShop{
             margin-top: 10px;
             i{
-                @include common_stars(#fff,10px);
+                @include common_stars($white,10px);
                 margin: 0 7px;
             }
             a{
                 font-size: 13px;
-                font-family: Open Sans,sans-serif;
+                font-family:$second-font;
                 &:first-child{
                     color: hsla(0,0%,100%,.8);
                     transition: .3s ease;
                     &:hover{
-                      color: #fff;
+                      color: $white;
                     }
                 }
                 &:last-child{
-                    color: #fff;
+                    color: $white;
                 }
             }
         }
@@ -1189,7 +1189,7 @@
         div{
             cursor: pointer;
             span{
-                font-family:Open Sans,sans-serif;
+                font-family:$second-font;
                 color: $mega-text;
                 font-size: 14px;
                 transition: .3s ease;
@@ -1205,7 +1205,7 @@
             }
             &:hover{
                 span{
-                    color: #000;
+                    color: $text-main;
                 }
             }
         }
@@ -1223,7 +1223,7 @@
         }
     }
     span.value {
-        font-family:Open Sans,sans-serif;
+        font-family:$second-font;
         height: 1.7em; 
         display: inline-block;
         font-size: 15px;
@@ -1252,16 +1252,16 @@
         -webkit-appearance: none;
         outline: none !important;
         background: transparent;
-        background-image: linear-gradient(to bottom, transparent 0%, transparent 30%, #000 30%, #000 60%, transparent 60%, transparent 100%);
+        background-image: linear-gradient(to bottom, transparent 0%, transparent 30%, $text-main 30%, $text-main 60%, transparent 60%, transparent 100%);
         height: 4px;
         &::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
             width: 12px;
             height: 12px;
-            background: #fff;
+            background: $white;
             cursor: pointer;
-            border: 2px solid #000;
+            border: 2px solid $text-main;
         }
         &::-webkit-slider-runnable-track {
             cursor: pointer;
@@ -1276,15 +1276,15 @@
     label{
         margin:5px 7px 5px 0;
         padding: 11px 15px;
-        border: 1px solid #ddd;
+        border: 1px solid $border;
         border-radius: 0;
         cursor: pointer;
         color: $mega-text;
         font-size: 14px;
         transition: .3s ease;
         &:hover{
-            border-color: #000;
-            color: #000;
+            border-color: $text-main;
+            color: $text-main;
         }
     }
 }
@@ -1305,7 +1305,7 @@
     margin-bottom: 18px;
     padding-bottom: 18px;
     .feat-img{
-        border: 1px solid #dadada;
+        border: 1px solid $border3;
         width: 78px;
         height: 78px;
     }
@@ -1318,7 +1318,7 @@
         }
         .stars{
             i{
-                @include common_stars(#E1E1E1,10px);
+                @include common_stars($border2,10px);
             }
         }
         
@@ -1347,23 +1347,23 @@
         top: 7%;
         right: -100%;
         z-index: 99999;
-        background-color: #000;
+        background-color: $text-main;
         padding: 15px;
         span{
-            font-family:Open Sans,sans-serif;
+            font-family:$second-font;
             font-size: 14px;
-            color: #fff;
+            color: $white;
         }
         i{
             margin-right: 5px;
-            color: #fff;
+            color: $white;
         }
     }
     .shopsecond-all{
         .left-head-part{
             margin-bottom: 3rem;
             *{
-            font-family:Open Sans,sans-serif;
+            font-family:$second-font;
             }
             p{
                 color: $mega-text;
@@ -1373,7 +1373,7 @@
                 display: inline-block;
                 cursor: pointer;
                 rotate: -90deg;
-                border: 2px solid #000;
+                border: 2px solid $text-main;
                 width: 36px;
                 height: 36px;
                 text-align: center;
@@ -1385,15 +1385,15 @@
                     }
                 }
                 &:hover{
-                    background-color: #000;
+                    background-color: $text-main;
                     i{
-                        color: #fff;
+                        color: $white;
                     }
                 }
             }
             .sorting{
                 .sort-left{
-                    border: 1px solid #e1e1e1;
+                    border: 1px solid $border2;
                     text-align: center;
                     position: relative;
                     padding: 2px 15px;
@@ -1416,7 +1416,7 @@
                     .dropdown{
                         z-index: 999999;
                         button{
-                            border: 1px solid #000;
+                            border: 1px solid $text-main;
                             border-radius: 0;
                             margin-left:.5rem ;
                             font-size: 14px;
@@ -1428,7 +1428,7 @@
                             font-size: 14px;
                             .dropdown-item{
                                 color: $mega-text;
-                                background-color: #fff;
+                                background-color: $white;
                                 transition: .3s ease;
                                 &:hover{
                                     color: $btn-color1;
@@ -1444,7 +1444,7 @@
             .box{
                 padding: 0;
                 .box-image{
-                    border: 1px solid #dadada;
+                    border: 1px solid $border3;
                     img{
                         transition: .5s ease;
                     }
@@ -1471,25 +1471,25 @@
                     margin-right: 5px;
                     a, span{
                         color: $mega-text;
-                        font-family: Open Sans,sans-serif;
+                        font-family: $second-font;
                         padding: 8px 12px;
                         text-decoration: none;
-                        border: 1px solid #eee;
-                        background-color: #fff;
+                        border: 1px solid $border4;
+                        background-color: $white;
                     }
                 }
             }
             .current {
-                color: #fff;
-                background-color: #000;
-                border-color: #000;
+                color: $white;
+                background-color: $text-main;
+                border-color: $text-main;
             }
             .prev{
                 display: none;
             }
             .prev.current, .next.current{
-                background: #fff;
-                border-color: #eee;
+                background: $white;
+                border-color: $border4;
                 color: $mega-text;
             }
         }       
@@ -1504,7 +1504,7 @@
             margin-top: 3rem;
         }
         table, tr{
-            border: 1px solid #ddd;
+            border: 1px solid $border;
         }
         table{
             width: 100%;
@@ -1524,7 +1524,7 @@
                 .quantity{
                     text-align: center;
                     padding: 5px;
-                    border: 1px solid #ddd;
+                    border: 1px solid $border;
                     border-radius: 30px;
                     input{
                         font-family: 'Open Sans', sans-serif;
@@ -1558,8 +1558,8 @@
             }
             a{
                 display: inline-block;
-                background-color: #000;
-                color: #fff;
+                background-color: $text-main;
+                color:$white;
                 font-size: 12px;
                 text-align: center;
                 width: 100%;
@@ -1575,8 +1575,8 @@
 #DetailsFirst{
    .detailsfirst-all{
     padding:  3rem 0 5rem;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
     .details-left{
         .d-left-top{
             position: relative;
@@ -1605,34 +1605,21 @@
                 z-index: 1000;
                 width: 40px;
                 height: 40px;
-                border: 1px solid #ddd;
+                border: 1px solid $border;
                 padding: 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 border-radius: 100%;
             }
-            // a,
-            //     a:visited {
-            //         color: #1760BF;
-            //         text-decoration: none;
-            //     }
-            //     a:hover {
-            //         color: #c00;
-            //     }
-            //     .hidden {
-            //     overflow: hidden;
-            //     display: none;
-            //     visibility: hidden;
-            //     }
         } 
         .d-left-bottom{
             margin-top: 20px;
             .imgBox{
-                border: 1px solid #ddd;
+                border: 1px solid $border;
             }
             .activeImg{
-                border: 1px solid #000!important;
+                border: 1px solid $text-main!important;
             }
             #videoBox{
                 position: relative;
@@ -1644,7 +1631,7 @@
                     top: 50%;
                     transform: translate(-50%,-50%);
                     font-weight: 900;
-                    color: #fff;
+                    color: $white;
                     background-color: rgba(17, 16, 16,.5);
                     padding: 14px 20px;
                     border-radius: 100%;
@@ -1656,7 +1643,7 @@
         padding: 50px 15px 0 50px;
         .d-right-top{
            nav{
-            color: #000;
+            color: $text-main;
             font-weight: 600;
             font-size: 13px;
             span{
@@ -1722,7 +1709,7 @@
                     width: 22px;
                     height: 22px;
                     right: -15px;
-                    border: 11px solid #fff;
+                    border: 11px solid $white;
                     border-right-color: transparent;
                     top: 0;
                     z-index: -1;
@@ -1732,11 +1719,11 @@
         }
         .d-right-middle{
             padding: 30px 0;
-            border-top: 1px solid #ddd;
-            border-bottom:1px solid #ddd;
+            border-top: 1px solid $border;
+            border-bottom:1px solid $border;
             p{
                 margin: 0;
-                font-family: Open Sans,sans-serif;
+                font-family: $second-font;
                 font-size: 14px;
                 line-height: 1.5rem;
                 color: #868686;
@@ -1788,14 +1775,14 @@
                 line-height: 50px;
                 background: rgba(0,0,0,.75);
                 border: 0;
-                color: #fff;
+                color: $white;
                 display: flex;
                 width: 60%;
                 justify-content: center;
                 align-items: center;
                 transition: .3s ease;
                 &:hover{
-                    background-color: $btn-color1;
+                    background-color: $white;
                 }
             }
             .heart{
@@ -1809,7 +1796,7 @@
                 &:hover{
                     background-color: $btn-color1;
                     i{
-                        color: #fff;
+                        color: $white;
                     }
                 }
                 i{
@@ -1819,7 +1806,7 @@
             }
             .buy{
                 background-color: $btn-color1;
-                color: #fff;
+                color: $white;
                 transition: .3s ease;
                 &:hover{
                     background-color: #AE8A61;
@@ -1828,8 +1815,8 @@
         }
         .d-right-bottom{
             span,p,a{
-                font-family: 'Open Sans', sans-serif;
-                color: #000;
+                font-family: $second-font;
+                color: $text-main;
                 font-size: 14px;
             }
             span{
@@ -1846,15 +1833,15 @@
 }
 #DetailsSecond{
     .detailssecond-all{
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $border;
         margin-bottom: 50px;
         table,tr,td{
-            border: 1px solid #ddd;
+            border: 1px solid $border;
         }
         table{
             width: 100%;
             *{
-                font-family: Open Sans,sans-serif;
+                font-family: $second-font;
                 font-size: 14px;
             }
             th,td{
@@ -1872,9 +1859,9 @@
                 }
             }
             .revBox{
-                *{font-family: Open Sans,sans-serif;}
+                *{font-family: $second-font;}
                 padding: 0px 30px 30px;
-                border: 1px solid #ddd;
+                border: 1px solid $border;
                 border-radius: 8px;
                 margin: 37.5px 0 65px;
                 i{
@@ -1897,16 +1884,16 @@
                     color: $mega-text;
                     font-size: 13px;
                     &:last-child{
-                        color: #000;
+                        color: $text-main;
                         font-size: 14px;
                     }
                 }
             }
             .addRev{
                 p{
-                    font-family: Open Sans,sans-serif;
+                    font-family:$second-font;
                     font-size: 13px;
-                    border: 2px solid #000;
+                    border: 2px solid $text-main;
                     display: inline-block;
                     padding: 15px 35px;
                     span{
@@ -1919,7 +1906,7 @@
             }
             .form{
                 padding: 40px 0 0; 
-                *{ font-family: Open Sans,sans-serif;}
+                *{ font-family: $second-font;}
                 p{
                     color:$mega-text;
                     font-size: 14px;
@@ -1932,7 +1919,7 @@
                        margin-right: 10px;
                        i{
                         font-size: 17px;
-                        color: #ddd;
+                        color: $border;
                         padding: 0 5px;
                         cursor: pointer;
                         transition: .3s ease;
@@ -1947,21 +1934,21 @@
                     font-size: 14px; 
                     box-shadow: none;
                     &:focus{
-                        border-color: #ddd;
+                        border-color: $border;
                     }
                 }
                 a{
                     display: inline-block;
                     width: 100%;
                     font-family: Marcellus,serif;
-                    color: #000;
-                    border: 1px solid #000;
+                    color: $text-main;
+                    border: 1px solid $text-main;
                     border-radius: 0;
                     transition: .3s ease;
                     font-size: 14px;
                     &:hover{
                         background-color: $btn-color1;
-                        color: #fff;
+                        color: $white;
                         border-color: $btn-color1;
                     }
                 }
@@ -1999,7 +1986,7 @@
           margin: 5px 20px;
           border-bottom: 2px solid transparent;
           color: $mega-text;
-          background: #fff;
+          background: $white;
           transition: all 0.3s ease;
           &:hover{
             &::after{
@@ -2024,17 +2011,17 @@
             transition: all .3s ease;
             width: 0;
             height: 2px;
-            background: #000;
+            background: $text-main;
           }
   
           &.is-active {
             bottom: 0px;
             z-index: 0;
             overflow: hidden;
-            border-bottom: 2px solid #000;
-            background: #fff;
+            border-bottom: 2px solid $text-main;
+            background: $white;
             span{
-                color: #000;
+                color: $text-main;
             }
           }
         }
@@ -2043,7 +2030,7 @@
       &-bar {
         padding: 2.5rem 0;
         overflow: hidden;
-        background: #fff;
+        background: $white;
   
         &-content {
           display: none;
@@ -2095,7 +2082,7 @@
                 z-index: 99999; 
                 &::before{
                     background-color:#AE8A61;
-                    color: #fff;
+                    color: $white;
                     padding: 8px 12px;
                     border-radius: 100%;
                     font-family: 'Font Awesome 5 Free';
@@ -2214,7 +2201,7 @@
                     width: 0%!important;
                 }
                 span{
-                    color: #000!important;
+                    color: $text-main!important;
                 }
               }
             }

@@ -1,3 +1,5 @@
+//Pagination
+
 let boxes=document.querySelectorAll('.products-content .box')
  var items = $(".mainContent .products-content");
  var numItems = items.length;
@@ -29,6 +31,8 @@ let boxes=document.querySelectorAll('.products-content .box')
          }
      }
  });
+
+//Grid
 
  let filterIcons=document.querySelectorAll('.s-icons')
 filterIcons.forEach(icon=>{

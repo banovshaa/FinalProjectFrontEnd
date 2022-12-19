@@ -633,7 +633,7 @@ footer .footer-third i {
   color: #ff4a4a;
 }
 .common_box .box .box-text .nostars i, #ShopSecond .shopsecond-all .products-content .box .box-text .nostars i, .slider-products2 .box .box-text .nostars i, .slider-products .box .box-text .nostars i {
-  color: #E1E1E1;
+  color: #e1e1e1;
 }
 .common_box .box .box-text .review, #ShopSecond .shopsecond-all .products-content .box .box-text .review, .slider-products2 .box .box-text .review, .slider-products .box .box-text .review {
   color: #a3a3a3;
@@ -1120,7 +1120,7 @@ footer .footer-third i {
 #Sixth .s-all .s-box .s-image span svg {
   width: 3rem;
   height: 3rem;
-  fill: white;
+  fill: #fff;
 }
 #Sixth .s-all .s-box .s-image span:hover {
   -webkit-animation: move 0.6s;
@@ -1777,7 +1777,7 @@ footer .footer-third i {
   font-size: 10px;
 }
 .cat-item .feat-box .feat-text .stars i {
-  color: #E1E1E1;
+  color: #e1e1e1;
   font-size: 10px;
 }
 .cat-item .feat-box .feat-text a {
@@ -2211,7 +2211,7 @@ footer .footer-third i {
   transition: 0.3s ease;
 }
 #DetailsFirst .detailsfirst-all .details-right .d-right-middle .add:hover {
-  background-color: #BFA483;
+  background-color: #fff;
 }
 #DetailsFirst .detailsfirst-all .details-right .d-right-middle .heart {
   display: flex;
@@ -2241,7 +2241,7 @@ footer .footer-third i {
   background-color: #AE8A61;
 }
 #DetailsFirst .detailsfirst-all .details-right .d-right-bottom span, #DetailsFirst .detailsfirst-all .details-right .d-right-bottom p, #DetailsFirst .detailsfirst-all .details-right .d-right-bottom a {
-  font-family: "Open Sans", sans-serif;
+  font-family: Open Sans, sans-serif;
   color: #000;
   font-size: 14px;
 }
