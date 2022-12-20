@@ -1153,6 +1153,23 @@
         }
     }
 }
+.succesfully {
+    position: fixed;
+    top: 7%;
+    right: -100%;
+    z-index: 99999;
+    background-color: $text-main;
+    padding: 15px;
+    span {
+        font-family: $second-font;
+        font-size: 14px;
+        color: $white;
+    }
+    i {
+        margin-right: 5px;
+        color: $white;
+    }
+}
 #ShopFirst {
     .shopfirst-all {
         background: url("https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/bg-breadcrumb.jpg.webp") center / cover;
@@ -1352,23 +1369,6 @@
     }
 }
 #ShopSecond {
-    .succesfully {
-        position: fixed;
-        top: 7%;
-        right: -100%;
-        z-index: 99999;
-        background-color: $text-main;
-        padding: 15px;
-        span {
-            font-family: $second-font;
-            font-size: 14px;
-            color: $white;
-        }
-        i {
-            margin-right: 5px;
-            color: $white;
-        }
-    }
     .shopsecond-all {
         .left-head-part {
             margin-bottom: 3rem;
@@ -1797,7 +1797,7 @@
                     align-items: center;
                     transition: 0.3s ease;
                     &:hover {
-                        background-color: $white;
+                        background-color: $btn-color1;
                     }
                 }
                 .heart {

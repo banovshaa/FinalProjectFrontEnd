@@ -1680,6 +1680,24 @@ footer .footer-third i {
      object-fit: contain;
 }
 
+.succesfully {
+  position: fixed;
+  top: 7%;
+  right: -100%;
+  z-index: 99999;
+  background-color: #000;
+  padding: 15px;
+}
+.succesfully span {
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+.succesfully i {
+  margin-right: 5px;
+  color: #fff;
+}
+
 #ShopFirst .shopfirst-all {
   background: url("https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/bg-breadcrumb.jpg.webp") center/cover;
   padding: 50px 0;
@@ -1864,23 +1882,6 @@ footer .footer-third i {
   color: #868686;
 }
 
-#ShopSecond .succesfully {
-  position: fixed;
-  top: 7%;
-  right: -100%;
-  z-index: 99999;
-  background-color: #000;
-  padding: 15px;
-}
-#ShopSecond .succesfully span {
-  font-family: Open Sans, sans-serif;
-  font-size: 14px;
-  color: #fff;
-}
-#ShopSecond .succesfully i {
-  margin-right: 5px;
-  color: #fff;
-}
 #ShopSecond .shopsecond-all .left-head-part {
   margin-bottom: 3rem;
 }
@@ -2281,7 +2282,7 @@ footer .footer-third i {
   transition: 0.3s ease;
 }
 #DetailsFirst .detailsfirst-all .details-right .d-right-middle .add:hover {
-  background-color: #fff;
+  background-color: #BFA483;
 }
 #DetailsFirst .detailsfirst-all .details-right .d-right-middle .heart {
   display: flex;

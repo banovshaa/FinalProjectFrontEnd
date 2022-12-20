@@ -451,7 +451,7 @@ let btnLog=document.querySelector('.button-login').addEventListener('click',func
  if (localStorage.getItem('Wine')===null) {
   localStorage.setItem('Wine',JSON.stringify([]))
 }
- let addBtn=document.querySelectorAll('#addCart')
+ let addBtn=document.querySelectorAll('.addCart')
  addBtn.forEach(btn=>{
   btn.onclick=function(e){
     e.preventDefault();
