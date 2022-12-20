@@ -59,3 +59,15 @@ document.querySelector('#sort-3').addEventListener('click',function(){
   })
 })
 
+document.querySelector('#sort-4').addEventListener('click',function(){
+  boxes.forEach(box=>{
+  box.parentElement.classList.value='col-xl-12 col-lg-4 col-md-4 col-6'
+  box.classList.value="box d-flex align-items-center"
+  box.querySelector('.box-text').style.textAlign="left"
+  box.querySelector('.box-text').style.marginLeft="2rem"
+  box.querySelector('.box-text').style.width="100%"
+  box.querySelector('.box-text a').classList.value="changedTitle"
+  box.querySelector('.b-list').style.left="13%"
+  box.querySelector('.b-list').style.bottom="25%"
+  })
+})
