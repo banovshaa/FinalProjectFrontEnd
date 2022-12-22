@@ -565,3 +565,14 @@ $(".img_producto_container")
    btnTarget.classList.add("is-active");
  }
  
+//Details increase decrease
+document.querySelector('#incPr').onclick=function(e){
+e.preventDefault();
+document.querySelector('#inpPr').value++;
+}
+document.querySelector('#decPr').onclick=function(e){
+  e.preventDefault();
+  if (document.querySelector('#inpPr').value!=='1') {
+    document.querySelector('#inpPr').value--;
+  }
+  }
